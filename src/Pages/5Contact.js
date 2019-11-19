@@ -4,32 +4,34 @@ import BKSunset from "../Resources/BKCross2.jpg";
 import { Parallax } from "react-parallax";
 const contactList = [
   {
-    name: "pastor Gary",
-    age: "27",
-    favoriteScripture: "Isaac 25:5",
-    email: "email@jesus.com",
+    role: "Lead Pastor",
+    name: "Dan Martin",
+    email: "dan@storypoint.info",
+    phone: "509.619.5472",
     imgURL: PastorImg
   },
   {
-    name: "henchmen 1",
-    age: "27",
-    favoriteScripture: "Isaac 25:5",
-    email: "email@jesus.com",
+    role: "Children’s Ministry Leader",
+    name: "Sheri Martin",
+    email: "sheri@storypoint.info",
     imgURL: PastorImg
   },
   {
-    name: "henchmen 2",
-    age: "27",
-    favoriteScripture: "Isaac 25:5",
-    email: "email@jesus.com",
+    role: "Associate Pastor",
+    name: "Patty Armstrong",
+    email: "patty@storypoint.info",
     imgURL: PastorImg
   },
   {
-    name: "henchmen 3",
-    age: "27",
-    favoriteScripture: "Isaac 25:5",
-    email: "email@jesus.com",
+    role: "Worship Ministry",
+    name: "Larry Henderson & Nikki Perkins",
+    email: "worship@storypoint.info",
     imgURL: PastorImg
+  },
+  {
+    role: "Media/Web Ministry",
+    name: "Tom Egelhoff",
+    email: "tom@storypoint.info "
   }
 ];
 class Contact extends Component {
@@ -51,8 +53,18 @@ class Contact extends Component {
           <div className="parallaxSpace"></div>
         </Parallax>
         <div className="Contact">
-          Below are those responsible for this great humble ministries good
-          deeds. We are blessed to have such creatures walk this earth.
+          <p>
+            We define staff a little differently. Webster will give you a
+            minimum of 17 definitions of the word staff. But at Story Point,
+            these two are our favorites, a group of persons charged with
+            carrying out the work of an establishment or executing some
+            undertaking and something that supports or sustains. What supports
+            and sustains us is the growing group of servant leaders. Story Point
+            continues to grow, mature, frankly it continues to exist because of
+            our dedicated un-paid “staff” that gives sacrificailly of their time
+            and resources. But, if you must know more, below you can find out
+            about our pastoral staff.
+          </p>
           <div className="allContactsContainer">
             {contactList.map(contact => {
               return (
@@ -66,8 +78,7 @@ class Contact extends Component {
                     <p className="contactName">{contact.name}</p>
                   </div>
                   <div className="contactBio">
-                    <p>Age: {contact.age}</p>
-                    <p>Favorite Passage: {contact.favoriteScripture}</p>
+                    <p>{contact.role}</p>
                     <p>{contact.email}</p>
                   </div>
                 </div>

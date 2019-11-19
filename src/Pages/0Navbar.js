@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Logo from "./Resources/logo.png";
-import "./App.css";
+import Logo from "../Resources/logo.png";
 
 class Navbar extends Component {
   render() {
@@ -32,7 +31,7 @@ class Navbar extends Component {
               onClick={() => this.props.changePage("mission")}
               className="button4 navButton"
             >
-              MISSION
+              BELIEFS
             </button>
             <button
               onClick={() => this.props.changePage("contact")}
