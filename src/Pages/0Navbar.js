@@ -5,8 +5,8 @@ class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      hoverAbout: true,
-      hoverBeliefs: true
+      hoverAbout: false,
+      hoverBeliefs: false
     };
   }
   render() {
