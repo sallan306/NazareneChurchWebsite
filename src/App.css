@@ -3,22 +3,30 @@ body {
 }
 
 /* ----------------------------------------------- navbar */
+.navLogoAndTitle {
+  cursor: pointer;
+}
+.buttonHovered {
+  position: absolute;
+}
 .navButtonsContainer {
   float: left;
   margin: 30px;
   width: 50%;
-
 }
-.navButton {
+.buttonContainer {
   float: left;
   width: 20%;
   height: 50px;
+  cursor: pointer;
+}
+.navButton {
   background: transparent;
   border: 0;
-  cursor: pointer;
   outline: none;
   opacity: 0.5;
-  letter-spacing: 2px;;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 .navButton:hover {
   opacity: 1;
@@ -51,11 +59,13 @@ body {
 }
 /* ----------------------------------------------- footer */
 .Footer {
+  text-align: center;
   height: 200px;
   background: rgb(223, 223, 223);
 }
 .footerAddresses {
-  width: 500px;
+  width: 70%;
+  margin-left: 15%;
 }
 .address {
   text-align: center;
@@ -64,29 +74,11 @@ body {
 }
 /* ----------------------------------------------- content */
 
-.contentHome,
-.contentAbout,
-.contentSermons,
-.contentMission,
-.contentContact {
+.content {
   text-align: center;
-  padding-top: 20px;
+  width: 80%;
+  margin-left: 10%;
 }
-/* .contentHome {
-
-}
-.contentAbout {
-
-}
-.contentSermons {
-
-}
-.contentMission {
-
-}
-.contentContact {
-
-} */
 .whiteSpace {
   height: 100px;
   background: white;
@@ -95,8 +87,11 @@ body {
   height: 300px;
 }
 /* ----------------------------------------------------------parallax */
-.parallaxSpace {
-  height: 500px;
+.parallaxSpacePrimary {
+  height: 90vh;
+}
+.parallaxSpaceSecondary {
+  height: 100vh;
 }
 .parallaxTitle {
   font-size: 80px;
@@ -107,6 +102,14 @@ body {
   margin-top: 200px;
   letter-spacing: 20px;
 }
+/* ---------------------------------------------------------- beliefs */
+.ourBeliefs {
+  text-align: left;
+}
+.scripture {
+  margin-top: 0;
+  opacity: 0.5;
+}
 /* ---------------------------------------------------------- contact */
 .allContactsContainer {
   text-align: center;
@@ -114,9 +117,17 @@ body {
 .contactContainer {
   display: inline-block;
   width: 200px;
-  height: 300px;
-  background: red;
+  height: 250px;
+  background: whitesmoke;
   margin: 10px;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: rgba(128, 128, 128, 0.459);
+  border-radius: 10px;
+}
+.contactContainer:hover {
+  background: rgb(228, 226, 226);
+  border-color: gray;
 }
 
 .ContactImgAndName {
@@ -135,7 +146,5 @@ body {
   height: 70%;
   display: block;
   float: left;
-}
-.contactContainer:hover {
-  background: blue;
+  width: 100%;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {SocialIcon } from "react-social-icons"
 class Footer extends Component {
   render() {
     return (
@@ -20,11 +20,9 @@ class Footer extends Component {
               Kennewick, WA 99336
             </p>
           </div>
+          <SocialIcon url="https://www.facebook.com/StoryPointComunityChurchOfTheNazarene" />
+          <SocialIcon network="email"url="info@storypoint.info" />
         </div>
-        <a href="mailto:info@storypoint.info" type="email">
-          {" "}
-          EMAIL US
-        </a>
       </div>
     );
   }

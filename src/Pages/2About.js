@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import BKSunset from "../Resources/BKCross2.jpg";
+import BKAbout from "../Resources/BKCross2.jpg";
+import BKHistory from "../Resources/BKBible.jpg";
 import { Parallax } from "react-parallax";
 
 class About extends Component {
@@ -8,18 +9,25 @@ class About extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    if (this.props.currentSubPage === "history")
+    {
+      //go to history section of page
+
+    }
+  }
   render() {
     return (
       <div className="About">
         <Parallax
           strength={this.props.parallaxStrength}
-          bgImage={BKSunset}
+          bgImage={BKAbout}
           bgImageAlt="the cat"
         >
           <div className="parallaxTitle">ABOUT</div>
-          <div className="parallaxSpace"></div>
+          <div className="parallaxSpacePrimary"></div>
         </Parallax>
-        <div className="contentAbout">
+        <div className="content contentAbout">
           <h3>About Us</h3>
           <p className="aboutParagraph">
             The church of the Nazarine has been an upstanding member of the
@@ -58,13 +66,13 @@ class About extends Component {
         </div>
         <Parallax
           strength={this.props.parallaxStrength}
-          bgImage={BKSunset}
+          bgImage={BKHistory}
           bgImageAlt="the cat"
         >
           <div className="parallaxTitle">HISTORY</div>
-          <div className="parallaxSpace"></div>
+          <div className="parallaxSpaceSecondary"></div>
         </Parallax>
-        <div className="contentHistory">
+        <div className="content contentHistory">
           <h3>Portage First Church</h3>
           <p className="aboutParagraph">
             In the late 90s God was on the move at First Church of the Nazarene

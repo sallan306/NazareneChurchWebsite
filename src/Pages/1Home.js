@@ -18,10 +18,10 @@ class Home extends Component {
           bgImageAlt="the cat"
         >
           <div className="parallaxTitle">WELCOME</div>
-          <div className="parallaxSpace"></div>
+          <div className="parallaxSpacePrimary"></div>
         </Parallax>
 
-        <div className="contentHome">
+        <div className="content contentHome">
           <p>
             Story Point Community Church is a comfortable place where people
             from all walks of life can encounter the dangerous, life-changing
@@ -38,9 +38,9 @@ class Home extends Component {
             title="googleMap"
             width="600"
             height="450"
-            frameborder="0"
+            frameBorder="0"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
           ></iframe>
         </div>
       </div>

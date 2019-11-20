@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PastorImg from "../Resources/pastor.jpg";
-import BKSunset from "../Resources/BKCross2.jpg";
+import BKSunset from "../Resources/BKHoldingHands.jpg";
 import { Parallax } from "react-parallax";
 const contactList = [
   {
@@ -31,7 +31,8 @@ const contactList = [
   {
     role: "Media/Web Ministry",
     name: "Tom Egelhoff",
-    email: "tom@storypoint.info "
+    email: "tom@storypoint.info",
+    imgURL: PastorImg
   }
 ];
 class Contact extends Component {
@@ -50,9 +51,9 @@ class Contact extends Component {
           bgImageAlt="the cat"
         >
           <div className="parallaxTitle">CONTACT</div>
-          <div className="parallaxSpace"></div>
+          <div className="parallaxSpacePrimary"></div>
         </Parallax>
-        <div className="Contact">
+        <div className="content contentContact">
           <p>
             We define staff a little differently. Webster will give you a
             minimum of 17 definitions of the word staff. But at Story Point,
@@ -80,6 +81,7 @@ class Contact extends Component {
                   <div className="contactBio">
                     <p>{contact.role}</p>
                     <p>{contact.email}</p>
+                    {contact.phone ? <p>{contact.phone}</p> : ""}
                   </div>
                 </div>
               );

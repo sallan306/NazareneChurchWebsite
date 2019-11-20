@@ -13,12 +13,13 @@ class App extends Component {
     super();
     this.state = {
       currentPage: "home",
+      currentSubPage: null,
       parallaxStrength: 500
     };
   }
 
-  changePage = input => {
-    this.setState({ currentPage: input });
+  changePage = (page, subpage = null) => {
+    this.setState({ currentPage: page, currentSubPage: subpage });
   };
 
   currentPage = () => {
@@ -36,7 +37,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="app">
+      <div className="App">
         <Navbar changePage={this.changePage} />
         <div className="navbarSpacer"></div>
         {this.currentPage()}

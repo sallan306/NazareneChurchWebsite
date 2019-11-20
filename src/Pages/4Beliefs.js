@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import BKSunset from "../Resources/BKCross2.jpg";
+import BKBeliefs from "../Resources/BKSunset.jpg";
+import BKValues from "../Resources/BKGrainField.jpg";
 import { Parallax } from "react-parallax";
 
 class Beliefs extends Component {
@@ -13,99 +14,118 @@ class Beliefs extends Component {
       <div className="Mission">
         <Parallax
           strength={this.props.parallaxStrength}
-          bgImage={BKSunset}
+          bgImage={BKBeliefs}
           bgImageAlt="the cat"
         >
           <div className="parallaxTitle">BELIEFS</div>
-          <div className="parallaxSpace"></div>
+          <div className="parallaxSpacePrimary"></div>
         </Parallax>
-        <div className="contentBeliefs">
+        <div className="content contentBeliefs">
           <ul className="ourBeliefs">
             <li key="1">
               We believe in one God! He’s the Creator of all things and reveals
-              Himself as Father, Son, and Spirit. (Genesis 1:1; Matthew 3:16-17,
-              28:19-20; 2 Corinthians 13:14)
+              Himself as Father, Son, and Spirit.
+              <p className="scripture">
+                Genesis 1:1; Matthew 3:16-17, 28:19-20; 2 Corinthians 13:14
+              </p>
             </li>
             <li key="2">
               We believe in who Jesus Christ is and was and that He became like
-              us, yet sinless, to bring about our salvation. (Matthew 1:20,
-              16:15; John 1:1-18)
+              us, yet sinless, to bring about our salvation.
+              <p className="scripture"> Matthew 1:20, 16:15; John 1:1-18</p>
             </li>
             <li key="3">
               We believe in the Holy Spirit, who is active in our world,
-              bringing us to salvation. (John 14:15-18, 16:7-15; Acts 2:1-4;
-              Romans 8:1-17)
+              bringing us to salvation.
+              <p className="scripture">
+                John 14:15-18, 16:7-15; Acts 2:1-4; Romans 8:1-17
+              </p>
             </li>
             <li key="4">
               We believe that the Bible is the fully inspired Word of God. It
               gives us all we need to know about how to be saved and how we
-              should live. (2 Timothy 3:15; 2 Peter 1:20-21)
+              should live.
+              <p className="scripture"> 2 Timothy 3:15; 2 Peter 1:20-21</p>
             </li>
             <li key="5">
               We believe that we are all sinners by both our nature and our acts
-              and we need God’s forgiveness and cleansing. (Genesis 3; Romans
-              3:23, 5:14, 6:15-23, 7:15-18)
+              and we need God’s forgiveness and cleansing.
+              <p className="scripture">
+                Genesis 3; Romans 3:23, 5:14, 6:15-23, 7:15-18
+              </p>
             </li>
-            <li key="5">
+            <li key="6">
               We believe that Jesus Christ died on the Cross and that we must
               believe in Him, His death and His resurrection to be restored to a
-              right relationship with God. (Isaiah 53:6-7; John 3:14-17)
+              right relationship with God.
+              <p className="scripture"> Isaiah 53:6-7; John 3:14-17</p>
             </li>
-            <li key="5">
+            <li key="7">
               We believe God helps us turn to Him from our sin. He doesn’t force
-              us but gives us that choice to accept Him. (Genesis 2:16-17; John
-              1:12; Galatians 6:7-8)
+              us but gives us that choice to accept Him.
+              <p className="scripture">
+                Genesis 2:16-17; John 1:12; Galatians 6:7-8
+              </p>
             </li>
-            <li key="5">
+            <li key="8">
               We believe each person must confess their sin, turn away from
-              their sin, and trust Christ to accept them. (Isaiah 55:6-7; Acts
-              17:30; 1 John 1:8-9)
+              their sin, and trust Christ to accept them.
+              <p className="scripture">
+                Isaiah 55:6-7; Acts 17:30; 1 John 1:8-9
+              </p>
             </li>
-            <li key="5">
+            <li key="9">
               We believe that after we are adopted into God’s family, we need to
               commit our entire life to Him, He purifies our hearts and cleanses
               our spirit. He fills us with His perfect love and gives us
-              strength and power to live our lives for Him daily. (Ezekiel
-              36:25-27; John 17:16-19; 1 Thessalonians 5:22-23)
+              strength and power to live our lives for Him daily.
+              <p className="scripture">
+                Ezekiel 36:25-27; John 17:16-19; 1 Thessalonians 5:22-23
+              </p>
             </li>
-            <li key="5">
+            <li key="10">
               We believe that the church is the active body of Christ in the
               world today. The church is made up of people, called together by
               the Holy Spirit, to fulfill God’s plan and purpose for the world
-              until Jesus returns. (1 Corinthians 12:12-31; Ephesians 5:25-27)
+              until Jesus returns.
+              <p className="scripture">
+                1 Corinthians 12:12-31; Ephesians 5:25-27
+              </p>
             </li>
-            <li key="5">
-              We believe that Christians should be baptized. (Matthew 28:16-20;
-              Acts 2:37-41)
+            <li key="11">
+              We believe that Christians should be baptized.
+              <p className="scripture"> Matthew 28:16-20; Acts 2:37-41</p>
             </li>
-            <li key="5">
+            <li key="12">
               We believe in communion; participating in the Lord’s Supper.
-              (Matthew 26:26-29; 1 Corinthians 11:23-32)
+              <p className="scripture">
+                Matthew 26:26-29; 1 Corinthians 11:23-32
+              </p>
             </li>
-            <li key="5">
-              We believe God can heal. We pray for healing. (2 Corinthians
-              12:7-10; James 5:13-16)
+            <li key="13">
+              We believe God can heal. We pray for healing.
+              <p className="scripture">2 Corinthians 12:7-10; James 5:13-16</p>
             </li>
-            <li key="5">
-              We believe that Jesus is coming again. (John 14:1-3; 1
-              Thessalonians 4:13-18)
+            <li key="14">
+              We believe that Jesus is coming again.
+              <p className="scripture">John 14:1-3; 1 Thessalonians 4:13-18</p>
             </li>
-            <li key="5">
+            <li key="15">
               We believe everyone is accountable to God and will face His
-              judgment and receive His rewards and punishments. (Matthew
-              25:31-46; Revelation 20:11-15)
+              judgment and receive His rewards and punishments.
+              <p className="scripture">Matthew 25:31-46; Revelation 20:11-15</p>
             </li>
           </ul>
         </div>
         <Parallax
           strength={this.props.parallaxStrength}
-          bgImage={BKSunset}
+          bgImage={BKValues}
           bgImageAlt="the cat"
         >
           <div className="parallaxTitle">VALUES</div>
-          <div className="parallaxSpace"></div>
+          <div className="parallaxSpaceSecondary"></div>
         </Parallax>
-        <div className="contentValues">
+        <div className="content contentValues">
           <h2>Worship</h2>
           <p>
             Our story will be about attaching ultimate value upon God “…you must
