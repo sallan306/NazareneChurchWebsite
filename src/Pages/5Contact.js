@@ -1,38 +1,43 @@
 import React, { Component } from "react";
 import PastorImg from "../Resources/pastor.jpg";
-import BKSunset from "../Resources/BKHoldingHands.jpg";
-import { Parallax } from "react-parallax";
+import BKContact from "../Resources/BKHoldingHands.jpg";
+import ParallaxCustom from "./ParallaxCustom";
 const contactList = [
   {
     role: "Lead Pastor",
     name: "Dan Martin",
     email: "dan@storypoint.info",
     phone: "509.619.5472",
-    imgURL: PastorImg
+    imgURL: PastorImg,
+    index: 1
   },
   {
     role: "Children’s Ministry Leader",
     name: "Sheri Martin",
     email: "sheri@storypoint.info",
-    imgURL: PastorImg
+    imgURL: PastorImg,
+    index: 2
   },
   {
     role: "Associate Pastor",
     name: "Patty Armstrong",
     email: "patty@storypoint.info",
-    imgURL: PastorImg
+    imgURL: PastorImg,
+    index: 3
   },
   {
     role: "Worship Ministry",
     name: "Larry Henderson & Nikki Perkins",
     email: "worship@storypoint.info",
-    imgURL: PastorImg
+    imgURL: PastorImg,
+    index: 4
   },
   {
     role: "Media/Web Ministry",
     name: "Tom Egelhoff",
     email: "tom@storypoint.info",
-    imgURL: PastorImg
+    imgURL: PastorImg,
+    index: 5
   }
 ];
 class Contact extends Component {
@@ -45,14 +50,13 @@ class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-        <Parallax
-          strength={this.props.parallaxStrength}
-          bgImage={BKSunset}
-          bgImageAlt="the cat"
-        >
-          <div className="parallaxTitle">CONTACT</div>
-          <div className="parallaxSpacePrimary"></div>
-        </Parallax>
+          <ParallaxCustom
+            title={"CONTACT"}
+            parallaxStrength={this.props.parallaxStrength}
+            BKIMGURL={BKContact}
+            primary={true}
+            bgStyle={{top: 100}}
+          />
         <div className="content contentContact">
           <p>
             We define staff a little differently. Webster will give you a
@@ -69,7 +73,7 @@ class Contact extends Component {
           <div className="allContactsContainer">
             {contactList.map(contact => {
               return (
-                <div className="contactContainer">
+                <div className="contactContainer" key={contact.index}>
                   <div className="ContactImgAndName">
                     <img
                       alt="contactImg"

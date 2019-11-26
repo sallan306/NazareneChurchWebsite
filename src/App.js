@@ -6,6 +6,11 @@ import Beliefs from "./Pages/4Beliefs";
 import Contact from "./Pages/5Contact";
 import Navbar from "./Pages/0Navbar";
 import Footer from "./Pages/Footer";
+import Login from "./Pages/Login";
+import LoginHome from "./Pages/LoginHome";
+import LoginNavbar from "./Pages/LoginNavbar";
+import LoginEditContacts from "./Pages/LoginEditContacts";
+import LoginEditEvents from "./Pages/LoginEditEvents";
 import "./App.css";
 
 class App extends Component {
@@ -14,10 +19,20 @@ class App extends Component {
     this.state = {
       currentPage: "home",
       currentSubPage: null,
-      parallaxStrength: 500
+      parallaxStrength: 500,
+      isLoggedIn: false
     };
   }
 
+  goToLogin = () => {
+    this.setState({ currentPage: "login" });
+  };
+  login = () => {
+    this.setState({ currentPage: "loginHome", isLoggedIn: true });
+  };
+  logout = () => {
+    this.setState({ currentPage: "home", isLoggedIn: false });
+  }
   changePage = (page, subpage = null) => {
     this.setState({ currentPage: page, currentSubPage: subpage });
   };
@@ -33,15 +48,28 @@ class App extends Component {
       return <Beliefs {...this.state} />;
     } else if (this.state.currentPage === "contact") {
       return <Contact {...this.state} />;
+    } else if (this.state.currentPage === "login") {
+      return <Login {...this.state} login={this.login} />;
+    } else if (this.state.currentPage === "loginHome") {
+      return <LoginHome {...this.state} />;
+    } else if (this.state.currentPage === "loginEditEvents") {
+      return <LoginEditEvents {...this.state} />;
+    } else if (this.state.currentPage === "loginEditContacts") {
+      return <LoginEditContacts {...this.state} />;
     }
   };
   render() {
     return (
       <div className="App">
-        <Navbar changePage={this.changePage} />
+        {this.state.isLoggedIn ? (
+          <LoginNavbar changePage={this.changePage} logout={this.logout} />
+        ) : (
+          <Navbar changePage={this.changePage} />
+        )}
+
         <div className="navbarSpacer"></div>
         {this.currentPage()}
-        <Footer />
+        {this.state.isLoggedIn ? "" : <Footer goToLogin={this.goToLogin} />}
       </div>
     );
   }

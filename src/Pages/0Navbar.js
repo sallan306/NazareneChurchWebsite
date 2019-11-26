@@ -6,7 +6,10 @@ class Navbar extends Component {
     super();
     this.state = {
       hoverAbout: false,
-      hoverBeliefs: false
+      hoverBeliefs: false,
+      visionOpacity: 0.5,
+      historyOpacity: 0.5,
+      valuesOpacity: 0.5,
     };
   }
   render() {
@@ -18,7 +21,10 @@ class Navbar extends Component {
             onClick={() => this.props.changePage("home")}
           >
             <img alt="logo" className="navLogo" src={Logo}></img>
-            <p className="navTitle">The Church of the Nazarine</p>
+            <div className="navTitle">
+              <p className="navTitleStorypoint">Storypoint</p>
+              <p className="navTitleSubtext">A Church of the Nazarine</p>
+            </div>
           </div>
           <div className="navButtonsContainer">
             <div className="buttonContainer">
@@ -42,10 +48,25 @@ class Navbar extends Component {
               </button>
               <button
                 style={{
-                  display: this.state.hoverAbout ? "inline-block" : "none"
+                  opacity:  this.state.hoverAbout ? this.state.visionOpacity : 0,
+                  pointerEvents: this.state.hoverAbout ? "auto" : "none"
                 }}
                 onClick={() => this.props.changePage("about", "history")}
                 className="button2 navButton"
+                onMouseEnter={()=>this.setState({visionOpacity: 1})}
+                onMouseLeave={()=>this.setState({visionOpacity: 0.5})}
+              >
+                VISION
+              </button>
+              <button
+                style={{
+                  opacity:  this.state.hoverAbout ? this.state.historyOpacity : 0,
+                  pointerEvents: this.state.hoverAbout ? "auto" : "none"
+                }}
+                onClick={() => this.props.changePage("about", "history")}
+                className="button2 navButton"
+                onMouseEnter={()=>this.setState({historyOpacity: 1})}
+                onMouseLeave={()=>this.setState({historyOpacity: 0.5})}
               >
                 HISTORY
               </button>
@@ -55,7 +76,7 @@ class Navbar extends Component {
                 onClick={() => this.props.changePage("podcast")}
                 className="button3 navButton"
               >
-                SERMONS
+                SERMON
               </button>
             </div>
             <div
@@ -71,8 +92,11 @@ class Navbar extends Component {
               </button>
               <button
                 style={{
-                  display: this.state.hoverBeliefs ? "inline-block" : "none"
+                  opacity:  this.state.hoverBeliefs ? this.state.valuesOpacity : 0,
+                  pointerEvents: this.state.hoverBeliefs ? "auto" : "none"
                 }}
+                onMouseEnter={()=>this.setState({valuesOpacity: 1})}
+                onMouseLeave={()=>this.setState({valuesOpacity: 0.5})}
                 onClick={() => this.props.changePage("mission")}
                 className="button4 navButton"
               >

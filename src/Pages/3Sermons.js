@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import BKSunset from "../Resources/BKWorshipService.jpg";
-import { Parallax } from "react-parallax";
+import BKSermons from "../Resources/BKWorshipService.jpg";
+import ParallaxCustom from "./ParallaxCustom";
 
 class Sermons extends Component {
   constructor() {
@@ -11,14 +11,12 @@ class Sermons extends Component {
   render() {
     return (
       <div className="Sermons">
-        <Parallax
-          strength={this.props.parallaxStrength}
-          bgImage={BKSunset}
-          bgImageAlt="the cat"
-        >
-          <div className="parallaxTitle">SERMONS</div>
-          <div className="parallaxSpacePrimary"></div>
-        </Parallax>
+        <ParallaxCustom
+          title={"SERMONS"}
+          parallaxStrength={this.props.parallaxStrength}
+          BKIMGURL={BKSermons}
+          primary={true}
+        />
         <div className="content contentSermons">
           <iframe
             title="SoundCloud"

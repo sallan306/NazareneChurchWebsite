@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BKBeliefs from "../Resources/BKSunset.jpg";
 import BKValues from "../Resources/BKGrainField.jpg";
-import { Parallax } from "react-parallax";
+import ParallaxCustom from "./ParallaxCustom";
 
 class Beliefs extends Component {
   constructor() {
@@ -12,14 +12,12 @@ class Beliefs extends Component {
   render() {
     return (
       <div className="Mission">
-        <Parallax
-          strength={this.props.parallaxStrength}
-          bgImage={BKBeliefs}
-          bgImageAlt="the cat"
-        >
-          <div className="parallaxTitle">BELIEFS</div>
-          <div className="parallaxSpacePrimary"></div>
-        </Parallax>
+          <ParallaxCustom
+            title={"BELIEFS"}
+            parallaxStrength={this.props.parallaxStrength}
+            BKIMGURL={BKBeliefs}
+            primary={true}
+          />
         <div className="content contentBeliefs">
           <ul className="ourBeliefs">
             <li key="1">
@@ -117,14 +115,12 @@ class Beliefs extends Component {
             </li>
           </ul>
         </div>
-        <Parallax
-          strength={this.props.parallaxStrength}
-          bgImage={BKValues}
-          bgImageAlt="the cat"
-        >
-          <div className="parallaxTitle">VALUES</div>
-          <div className="parallaxSpaceSecondary"></div>
-        </Parallax>
+        <ParallaxCustom
+            title={"VALUES"}
+            parallaxStrength={this.props.parallaxStrength}
+            BKIMGURL={BKValues}
+            primary={false}
+          />
         <div className="content contentValues">
           <h2>Worship</h2>
           <p>
