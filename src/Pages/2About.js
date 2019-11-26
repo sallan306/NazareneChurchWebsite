@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BKAbout from "../Resources/BKCross2.jpg";
+import BKVision from "../Resources/BKGirlPraying.jpg";
 import BKHistory from "../Resources/BKBible.jpg";
 import ParallaxCustom from "./ParallaxCustom";
 
@@ -40,7 +41,7 @@ class About extends Component {
             <ParallaxCustom
               title={"VISION"}
               parallaxStrength={this.props.parallaxStrength}
-              BKIMGURL={BKAbout}
+              BKIMGURL={BKVision}
               primary={false}
             />
             <div className="content contentVision">

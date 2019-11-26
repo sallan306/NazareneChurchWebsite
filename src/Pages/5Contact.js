@@ -50,14 +50,24 @@ class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-          <ParallaxCustom
-            title={"CONTACT"}
-            parallaxStrength={this.props.parallaxStrength}
-            BKIMGURL={BKContact}
-            primary={true}
-            bgStyle={{top: 100}}
-          />
+        <ParallaxCustom
+          title={"CONTACT"}
+          parallaxStrength={this.props.parallaxStrength}
+          BKIMGURL={BKContact}
+          primary={true}
+          bgStyle={{ top: 100 }}
+        />
         <div className="content contentContact">
+          <iframe
+            title="youtube"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+            width="500"
+            height="400"
+            style={{ border: "none", overflow: "hidden" }}
+            scrolling="no"
+            frameBorder="0"
+            allow="encrypted-media"
+          />
           <p>
             We define staff a little differently. Webster will give you a
             minimum of 17 definitions of the word staff. But at Story Point,
