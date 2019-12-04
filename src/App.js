@@ -3,7 +3,7 @@ import Home from "./Pages/1Home";
 import About from "./Pages/2About";
 import Sermons from "./Pages/3Sermons";
 import Beliefs from "./Pages/4Beliefs";
-import Contact from "./Pages/5Contact";
+import Events from "./Pages/5Events";
 import Navbar from "./Pages/0Navbar";
 import Footer from "./Pages/Footer";
 import Login from "./Pages/Login";
@@ -46,8 +46,8 @@ class App extends Component {
       return <Sermons {...this.state} />;
     } else if (this.state.currentPage === "mission") {
       return <Beliefs {...this.state} />;
-    } else if (this.state.currentPage === "contact") {
-      return <Contact {...this.state} />;
+    } else if (this.state.currentPage === "events") {
+      return <Events {...this.state} />;
     } else if (this.state.currentPage === "login") {
       return <Login {...this.state} login={this.login} />;
     } else if (this.state.currentPage === "loginHome") {

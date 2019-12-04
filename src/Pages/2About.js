@@ -71,8 +71,8 @@ class About extends Component {
               </p>
               <iframe
                 title="slideshow"
-                width="420"
-                height="315"
+                width="700"
+                height="530"
                 src="https://www.youtube.com/embed/8FmgY8ZE3Ng"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

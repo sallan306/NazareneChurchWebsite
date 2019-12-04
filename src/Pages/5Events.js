@@ -40,7 +40,7 @@ const contactList = [
     index: 5
   }
 ];
-class Contact extends Component {
+class Events extends Component {
   constructor() {
     super();
     this.state = {};
@@ -49,18 +49,23 @@ class Contact extends Component {
   createContactList = () => {};
   render() {
     return (
-      <div className="Contact">
+      <div className="Events">
         <ParallaxCustom
-          title={"CONTACT"}
+          title={"EVENTS"}
           parallaxStrength={this.props.parallaxStrength}
           BKIMGURL={BKContact}
           primary={true}
           bgStyle={{ top: 100 }}
         />
-        <div className="content contentContact">
+        <div className="content contentEvents">
+          <h2>Our Events</h2>
+          <div>Events Listed Here</div>
+        </div>
+        <div className="content contentFacebook">
+          <h2>Social</h2>
           <iframe
-            title="youtube"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+            title="facebook"
+            src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/StoryPointComunityChurchOfTheNazarene&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
             width="500"
             height="400"
             style={{ border: "none", overflow: "hidden" }}
@@ -68,6 +73,16 @@ class Contact extends Component {
             frameBorder="0"
             allow="encrypted-media"
           />
+        </div>
+        <ParallaxCustom
+          title={"CONTACT"}
+          parallaxStrength={this.props.parallaxStrength}
+          BKIMGURL={BKContact}
+          primary={false}
+          bgStyle={{ top: 100 }}
+        />
+        <div className="content contentContact">
+          <h2>Our Staff</h2>
           <p>
             We define staff a little differently. Webster will give you a
             minimum of 17 definitions of the word staff. But at Story Point,
@@ -84,18 +99,18 @@ class Contact extends Component {
             {contactList.map(contact => {
               return (
                 <div className="contactContainer" key={contact.index}>
-                  <div className="ContactImgAndName">
-                    <img
-                      alt="contactImg"
-                      className="contactImg"
-                      src={contact.imgURL}
-                    ></img>
-                    <p className="contactName">{contact.name}</p>
-                  </div>
-                  <div className="contactBio">
-                    <p>{contact.role}</p>
-                    <p>{contact.email}</p>
-                    {contact.phone ? <p>{contact.phone}</p> : ""}
+                  <img
+                    alt="contactImg"
+                    className="contactImg"
+                    src={contact.imgURL}
+                  ></img>
+                  <div className="contactInfo">
+                    <h2 className="contactName">{contact.name}</h2>
+                    <div className="contactBio">
+                      <p>{contact.role}</p>
+                      <p>{contact.email}</p>
+                      {contact.phone ? <p>{contact.phone}</p> : ""}
+                    </div>
                   </div>
                 </div>
               );
@@ -107,4 +122,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default Events;

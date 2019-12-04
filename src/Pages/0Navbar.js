@@ -105,10 +105,10 @@ class Navbar extends Component {
             </div>
             <div className="buttonContainer">
               <button
-                onClick={() => this.props.changePage("contact")}
+                onClick={() => this.props.changePage("events")}
                 className="button5 navButton"
               >
-                CONTACT
+                EVENTS
               </button>
             </div>
           </div>
