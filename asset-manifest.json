@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/NazareneChurchWebsite/static/css/main.55da1b29.chunk.css",
+    "main.js": "/NazareneChurchWebsite/static/js/main.5d9ae96c.chunk.js",
+    "main.js.map": "/NazareneChurchWebsite/static/js/main.5d9ae96c.chunk.js.map",
+    "runtime-main.js": "/NazareneChurchWebsite/static/js/runtime-main.9409427d.js",
+    "runtime-main.js.map": "/NazareneChurchWebsite/static/js/runtime-main.9409427d.js.map",
+    "static/js/2.53a26327.chunk.js": "/NazareneChurchWebsite/static/js/2.53a26327.chunk.js",
+    "static/js/2.53a26327.chunk.js.map": "/NazareneChurchWebsite/static/js/2.53a26327.chunk.js.map",
+    "index.html": "/NazareneChurchWebsite/index.html",
+    "precache-manifest.ca1954955888c689e58e873e2ce56169.js": "/NazareneChurchWebsite/precache-manifest.ca1954955888c689e58e873e2ce56169.js",
+    "service-worker.js": "/NazareneChurchWebsite/service-worker.js",
+    "static/css/main.55da1b29.chunk.css.map": "/NazareneChurchWebsite/static/css/main.55da1b29.chunk.css.map",
+    "static/media/BKBible.jpg": "/NazareneChurchWebsite/static/media/BKBible.bde50675.jpg",
+    "static/media/BKCross.jpg": "/NazareneChurchWebsite/static/media/BKCross.348479e1.jpg",
+    "static/media/BKCross2.jpg": "/NazareneChurchWebsite/static/media/BKCross2.12927233.jpg",
+    "static/media/BKGirlPraying.jpg": "/NazareneChurchWebsite/static/media/BKGirlPraying.5683fe8e.jpg",
+    "static/media/BKGrainField.jpg": "/NazareneChurchWebsite/static/media/BKGrainField.afff3f77.jpg",
+    "static/media/BKHoldingHands.jpg": "/NazareneChurchWebsite/static/media/BKHoldingHands.a5472a67.jpg",
+    "static/media/BKSunset.jpg": "/NazareneChurchWebsite/static/media/BKSunset.a21742c3.jpg",
+    "static/media/BKWorshipService.jpg": "/NazareneChurchWebsite/static/media/BKWorshipService.40acdf60.jpg",
+    "static/media/logo.png": "/NazareneChurchWebsite/static/media/logo.3e6a52ea.png",
+    "static/media/pastor.jpg": "/NazareneChurchWebsite/static/media/pastor.74829385.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9409427d.js",
+    "static/js/2.53a26327.chunk.js",
+    "static/css/main.55da1b29.chunk.css",
+    "static/js/main.5d9ae96c.chunk.js"
+  ]
+}
