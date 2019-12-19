@@ -29,7 +29,7 @@ class About extends Component {
             bgStyle={{ top: -100 }}
           />
           <div className="content contentAbout">
-            <h1>About Us</h1>
+            <h3 className="centeredh3">About Us</h3>
             <p className="aboutParagraph">
               The church of the Nazarine has been an upstanding member of the
               cumminity for more than 500 years, and has been a blessing for the
@@ -45,14 +45,14 @@ class About extends Component {
               primary={false}
             />
             <div className="content contentVision">
-              <h3>Our Mission</h3>
+              <h3 className="centeredh3">Our Mission</h3>
               <p>
                 “We exist to live, tell, and teach God’s life changing story to
                 people and to lead those people into a vibrant ever growing love
                 relationship with Jesus Christ so that they can go and do
                 likewise.”
               </p>
-              <h3>Our Purpose</h3>
+              <h3 className="centeredh3">Our Purpose</h3>
               <p>
                 The Great Commandment :: “The most important commandment is
                 this: ‘Hear, O Israel! The Lord our God is the one and only
@@ -69,6 +69,7 @@ class About extends Component {
                 commands I have given you. And be sure of this: I am with you
                 always, even to the end of the age.” Matthew 28:18-20 (NLT)
               </p>
+              <h3>We encourage new family members to watch the video below to better understand our core values</h3>
               <iframe
                 title="slideshow"
                 width="700"
@@ -89,7 +90,7 @@ class About extends Component {
             primary={false}
           />
           <div className="content contentHistory">
-            <h3>Portage First Church</h3>
+            <h3 className="centeredh3">Portage First Church</h3>
             <p className="aboutParagraph">
               In the late 90s God was on the move at First Church of the
               Nazarene in Portage, Indiana. In their quest to connect seekers

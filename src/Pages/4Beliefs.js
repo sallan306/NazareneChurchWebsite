@@ -12,14 +12,15 @@ class Beliefs extends Component {
   render() {
     return (
       <div className="Mission">
-          <ParallaxCustom
-            title={"BELIEFS"}
-            parallaxStrength={this.props.parallaxStrength}
-            BKIMGURL={BKBeliefs}
-            primary={true}
-          />
+        <ParallaxCustom
+          title={"BELIEFS"}
+          parallaxStrength={this.props.parallaxStrength}
+          BKIMGURL={BKBeliefs}
+          primary={true}
+        />
         <div className="content contentBeliefs">
           <ul className="ourBeliefs">
+            <h3 className="centeredh3">What We Know to be True</h3>
             <li key="1">
               We believe in one God! He’s the Creator of all things and reveals
               Himself as Father, Son, and Spirit.
@@ -116,31 +117,31 @@ class Beliefs extends Component {
           </ul>
         </div>
         <ParallaxCustom
-            title={"VALUES"}
-            parallaxStrength={this.props.parallaxStrength}
-            BKIMGURL={BKValues}
-            primary={false}
-          />
+          title={"VALUES"}
+          parallaxStrength={this.props.parallaxStrength}
+          BKIMGURL={BKValues}
+          primary={false}
+        />
         <div className="content contentValues">
-          <h2>Worship</h2>
+          <h3 className="centeredh3">Worship</h3>
           <p>
             Our story will be about attaching ultimate value upon God “…you must
             love the Lord your God with all your heart, all your soul, all your
             mind, and all your strength.” Mark 12:29
           </p>
-          <h2>Discipleship</h2>
+          <h3 className="centeredh3">Discipleship</h3>
           <p>
             Our story will be about learning to follow and obey Jesus Christ
             “…Teach these new disciples to obey all the commands I have given
             you.” Matthew 28:20
           </p>
-          <h2>Evangelism</h2>
+          <h3 className="centeredh3">Evangelism</h3>
           <p>
             Our story will be about reaching those who God longs for “Therefore,
             go and make disciples of all the nations, baptizing them in the name
             of the Father and the Son and the Holy Spirit” Matthew 28:18
           </p>
-          <h2>Fellowship</h2>
+          <h3 className="centeredh3">Fellowship</h3>
           <p>
             Our story will be about living in community with other believers “So
             now I am giving you a new commandment: Love each other. Just as I
@@ -148,7 +149,7 @@ class Beliefs extends Component {
             another will prove to the world that you are my disciples.” John
             13:34-35
           </p>
-          <h2>Service</h2>
+          <h3 className="centeredh3">Service</h3>
           <p>
             Our story will be about using our God given gifts in ministry to
             others “Love your neighbor as yourself” Mark 12:30

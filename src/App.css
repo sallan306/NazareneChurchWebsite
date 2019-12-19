@@ -92,8 +92,23 @@ body {
 .footerWhiteSpace {
   height: 100px;
 }
+.social-icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.footerAddressType {
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+.footerAddress {
+  margin-top: 10px;
+}
 /* ----------------------------------------------- content */
 
+.centeredh3 {
+  text-align: center;
+  text-transform: uppercase;
+}
 .content {
   text-align: center;
   width: 80%;

@@ -18,6 +18,7 @@ class Sermons extends Component {
           primary={true}
         />
         <div className="content contentSermons">
+          <h2 className="centeredh2">Sermon Podcast</h2>
           <iframe
             title="SoundCloud"
             width="80%"

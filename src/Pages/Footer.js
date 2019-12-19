@@ -8,23 +8,31 @@ class Footer extends Component {
         <div className="Footer">
           <div className="footerAddresses">
             <div className="address">
-              <h5>Physical Address</h5>
-              <p>
+              <h5 className="footerAddressType">Physical Address</h5>
+              <p className="footerAddress">
                 17 S. Rainier <br />
                 Kennewick, WA 99336
               </p>
             </div>
 
             <div className="address">
-              <h5>Mailing Address </h5>
-              <p>
+              <h5 className="footerAddressType">Mailing Address </h5>
+              <p className="footerAddress">
                 6855 W Clearwater Ave. A101-217 <br />
                 Kennewick, WA 99336
               </p>
             </div>
             <SocialIcon url="https://www.facebook.com/StoryPointComunityChurchOfTheNazarene" />
+
             <SocialIcon network="email" url="info@storypoint.info" />
-            <div><button onClick={()=> this.props.goToLogin()} className="loginButton">Login</button></div>
+            <div>
+              <button
+                onClick={() => this.props.goToLogin()}
+                className="loginButton"
+              >
+                Admin Login
+              </button>
+            </div>
           </div>
         </div>
       </div>
