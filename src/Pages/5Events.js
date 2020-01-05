@@ -68,10 +68,10 @@ class Events extends Component {
               className="facebookWindow"
               title="facebook"
               src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/StoryPointComunityChurchOfTheNazarene&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-              width="100"
+              width="500"
               height="400"
               // style={{ border: "none", overflow: "hidden" }}
-              scrolling="no"
+              scrolling="yes"
               frameBorder="0"
               allow="encrypted-media"
             />
