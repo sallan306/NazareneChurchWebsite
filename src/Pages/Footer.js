@@ -22,10 +22,10 @@ class Footer extends Component {
                 Kennewick, WA 99336
               </p>
             </div>
-            <h5>
+            {/* <h5>
               For your convenience we offer tithe online, as well as
               automated monthly payments
-            </h5>
+            </h5> */}
             <form
               action="https://www.paypal.com/cgi-bin/webscr"
               method="post"

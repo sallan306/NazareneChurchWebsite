@@ -65,11 +65,12 @@ class Events extends Component {
           <div className="content contentFacebook">
             <h2>Social</h2>
             <iframe
+              className="facebookWindow"
               title="facebook"
               src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/StoryPointComunityChurchOfTheNazarene&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-              width="500"
+              width="100"
               height="400"
-              style={{ border: "none", overflow: "hidden" }}
+              // style={{ border: "none", overflow: "hidden" }}
               scrolling="no"
               frameBorder="0"
               allow="encrypted-media"

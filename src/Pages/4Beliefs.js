@@ -11,7 +11,7 @@ class Beliefs extends Component {
   componentDidMount() {
     if (this.props.currentSubPage === "values") {
       window.scrollTo(0, this.props.valuesRef.current.offsetTop + 100);
-    } 
+    }
   }
   render() {
     return (
@@ -137,37 +137,40 @@ class Beliefs extends Component {
           />
           <div className="content contentValues">
             <h3 className="centeredh3">Worship</h3>
-            <p>
+            <p className="valuesParagraph">
               Our story will be about attaching ultimate value upon God “…you
               must love the Lord your God with all your heart, all your soul,
-              all your mind, and all your strength.” Mark 12:29
+              all your mind, and all your strength.”
             </p>
+            <p className="scripture"> Mark 12:29</p>
             <h3 className="centeredh3">Discipleship</h3>
-            <p>
+            <p className="valuesParagraph">
               Our story will be about learning to follow and obey Jesus Christ
               “…Teach these new disciples to obey all the commands I have given
-              you.” Matthew 28:20
+              you.”
             </p>
+            <p className="scripture"> Matthew 28:20</p>
             <h3 className="centeredh3">Evangelism</h3>
-            <p>
+            <p className="valuesParagraph">
               Our story will be about reaching those who God longs for
               “Therefore, go and make disciples of all the nations, baptizing
               them in the name of the Father and the Son and the Holy Spirit”
-              Matthew 28:18
             </p>
+            <p className="scripture"> Matthew 28:18</p>
             <h3 className="centeredh3">Fellowship</h3>
-            <p>
+            <p className="valuesParagraph">
               Our story will be about living in community with other believers
               “So now I am giving you a new commandment: Love each other. Just
               as I have loved you, you should love each other. Your love for one
-              another will prove to the world that you are my disciples.” John
-              13:34-35
+              another will prove to the world that you are my disciples.”
             </p>
+            <p className="scripture"> John 13:34-35</p>
             <h3 className="centeredh3">Service</h3>
-            <p>
+            <p className="valuesParagraph">
               Our story will be about using our God given gifts in ministry to
-              others “Love your neighbor as yourself” Mark 12:30
+              others “Love your neighbor as yourself”
             </p>
+            <p className="scripture"> Mark 12:30</p>
           </div>
         </div>
       </div>

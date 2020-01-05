@@ -21,6 +21,7 @@ class App extends Component {
       currentSubPage: null,
       parallaxStrength: 500,
       isLoggedIn: false,
+      screenWidth: 0,
       eventsList: [{ name: "contact1" }, { name: "contact2" }]
     };
     this.visionRef = React.createRef();
@@ -28,7 +29,12 @@ class App extends Component {
     this.valuesRef = React.createRef();
     this.contactRef = React.createRef();
   }
-
+  componentDidMount(){
+    console.log(window.innerWidth)
+    this.setState({
+      screenWidth: window.innerWidth
+    })
+  }
   goToLogin = () => {
     this.setState({ currentPage: "login" });
   };
@@ -96,6 +102,7 @@ class App extends Component {
           <LoginNavbar changePage={this.changePage} logout={this.logout} />
         ) : (
           <Navbar
+            screenWidth={this.state.screenWidth}
             changePage={this.changePage}
             visionRef={this.visionRef}
             historyRef={this.historyRef}

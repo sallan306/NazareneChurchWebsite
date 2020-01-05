@@ -8,7 +8,6 @@ class About extends Component {
   constructor() {
     super();
     this.state = {};
-
   }
 
   componentDidMount() {
@@ -75,6 +74,7 @@ class About extends Component {
                 better understand our core values
               </h3>
               <iframe
+                className="youtubeWindow"
                 title="slideshow"
                 width="700"
                 height="530"
