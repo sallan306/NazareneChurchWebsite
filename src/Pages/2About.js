@@ -8,13 +8,14 @@ class About extends Component {
   constructor() {
     super();
     this.state = {};
+
   }
 
   componentDidMount() {
     if (this.props.currentSubPage === "vision") {
-      //go to history section of page
+      window.scrollTo(0, this.props.visionRef.current.offsetTop + 100);
     } else if (this.props.currentSubPage === "history") {
-      //go to history section of page
+      window.scrollTo(0, this.props.historyRef.current.offsetTop + 100);
     }
   }
   render() {
@@ -37,7 +38,7 @@ class About extends Component {
               and so does the Church of the Nazarine
             </p>
           </div>
-          <div className="Vision">
+          <div className="Vision" ref={this.props.visionRef}>
             <ParallaxCustom
               title={"VISION"}
               parallaxStrength={this.props.parallaxStrength}
@@ -69,7 +70,10 @@ class About extends Component {
                 commands I have given you. And be sure of this: I am with you
                 always, even to the end of the age.” Matthew 28:18-20 (NLT)
               </p>
-              <h3>We encourage new family members to watch the video below to better understand our core values</h3>
+              <h3>
+                We encourage new family members to watch the video below to
+                better understand our core values
+              </h3>
               <iframe
                 title="slideshow"
                 width="700"
@@ -82,7 +86,7 @@ class About extends Component {
             </div>
           </div>
         </div>
-        <div className="History">
+        <div className="History" ref={this.props.historyRef}>
           <ParallaxCustom
             title={"HISTORY"}
             parallaxStrength={this.props.parallaxStrength}

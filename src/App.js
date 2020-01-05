@@ -20,8 +20,13 @@ class App extends Component {
       currentPage: "home",
       currentSubPage: null,
       parallaxStrength: 500,
-      isLoggedIn: false
+      isLoggedIn: false,
+      eventsList: [{ name: "contact1" }, { name: "contact2" }]
     };
+    this.visionRef = React.createRef();
+    this.historyRef = React.createRef();
+    this.valuesRef = React.createRef();
+    this.contactRef = React.createRef();
   }
 
   goToLogin = () => {
@@ -32,22 +37,48 @@ class App extends Component {
   };
   logout = () => {
     this.setState({ currentPage: "home", isLoggedIn: false });
-  }
-  changePage = (page, subpage = null) => {
+  };
+  changePage = (page, subpage = null, subpageRef = null) => {
+    console.log(subpageRef);
     this.setState({ currentPage: page, currentSubPage: subpage });
+    if (subpage !== null) {
+      this.changeSubPage(subpageRef);
+    }
+  };
+  changeSubPage = subpageRef => {
+    // console.log(subpageRef)
+    if (subpageRef.current !== null) {
+      window.scrollTo(0, subpageRef.current.offsetTop + 100);
+    }
   };
 
+  addEvent = eventToAdd => {
+    var tempEventArray = this.state.eventsList;
+    tempEventArray.push(eventToAdd);
+    this.setState(
+      {
+        eventsList: tempEventArray
+      },
+      () => console.log(this.state.eventsList)
+    );
+  };
   currentPage = () => {
     if (this.state.currentPage === "home") {
       return <Home {...this.state} />;
     } else if (this.state.currentPage === "about") {
-      return <About {...this.state} />;
+      return (
+        <About
+          {...this.state}
+          visionRef={this.visionRef}
+          historyRef={this.historyRef}
+        />
+      );
     } else if (this.state.currentPage === "podcast") {
       return <Sermons {...this.state} />;
-    } else if (this.state.currentPage === "mission") {
-      return <Beliefs {...this.state} />;
+    } else if (this.state.currentPage === "beliefs") {
+      return <Beliefs {...this.state} valuesRef={this.valuesRef} />;
     } else if (this.state.currentPage === "events") {
-      return <Events {...this.state} />;
+      return <Events {...this.state} contactRef={this.contactRef} />;
     } else if (this.state.currentPage === "login") {
       return <Login {...this.state} login={this.login} />;
     } else if (this.state.currentPage === "loginHome") {
@@ -55,7 +86,7 @@ class App extends Component {
     } else if (this.state.currentPage === "loginEditEvents") {
       return <LoginEditEvents {...this.state} />;
     } else if (this.state.currentPage === "loginEditContacts") {
-      return <LoginEditContacts {...this.state} />;
+      return <LoginEditContacts {...this.state} addEvent={this.addEvent} />;
     }
   };
   render() {
@@ -64,7 +95,14 @@ class App extends Component {
         {this.state.isLoggedIn ? (
           <LoginNavbar changePage={this.changePage} logout={this.logout} />
         ) : (
-          <Navbar changePage={this.changePage} />
+          <Navbar
+            changePage={this.changePage}
+            visionRef={this.visionRef}
+            historyRef={this.historyRef}
+            valuesRef={this.valuesRef}
+            contactRef={this.contactRef}
+            
+          />
         )}
 
         <div className="navbarSpacer"></div>

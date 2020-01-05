@@ -44,36 +44,7 @@ class Home extends Component {
             style={{ border: 0 }}
             allowFullScreen=""
           ></iframe>
-          <h5>For your convenience we offer tithe donations online, as well as automated monthly payments</h5>
-          <form
-            action="https://www.paypal.com/cgi-bin/webscr"
-            method="post"
-            target="_top"
-          >
-            <input type="hidden" name="cmd" value="_donations" />
-            <input type="hidden" name="business" value="VEK6YSLLRQXWU" />
-            <input
-              type="hidden"
-              name="item_name"
-              value="To support our great church ministry"
-            />
-            <input type="hidden" name="currency_code" value="USD" />
-            <input
-              type="image"
-              src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-              border="0"
-              name="submit"
-              title="PayPal - The safer, easier way to pay online!"
-              alt="Donate with PayPal button"
-            />
-            <img
-              alt=""
-              border="0"
-              src="https://www.paypal.com/en_US/i/scr/pixel.gif"
-              width="1"
-              height="1"
-            />
-          </form>
+
         </div>
       </div>
     );

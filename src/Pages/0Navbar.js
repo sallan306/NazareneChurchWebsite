@@ -7,11 +7,13 @@ class Navbar extends Component {
     this.state = {
       hoverAbout: false,
       hoverBeliefs: false,
+      hoverEvents: false,
       visionOpacity: 0.5,
       historyOpacity: 0.5,
-      valuesOpacity: 0.5,
+      valuesOpacity: 0.5
     };
   }
+
   render() {
     return (
       <div className="Navbar">
@@ -48,25 +50,35 @@ class Navbar extends Component {
               </button>
               <button
                 style={{
-                  opacity:  this.state.hoverAbout ? this.state.visionOpacity : 0,
+                  opacity: this.state.hoverAbout ? this.state.visionOpacity : 0,
                   pointerEvents: this.state.hoverAbout ? "auto" : "none"
                 }}
-                onClick={() => this.props.changePage("about", "history")}
+                onClick={() =>
+                  this.props.changePage("about", "vision", this.props.visionRef)
+                }
                 className="button2 navButton"
-                onMouseEnter={()=>this.setState({visionOpacity: 1})}
-                onMouseLeave={()=>this.setState({visionOpacity: 0.5})}
+                onMouseEnter={() => this.setState({ visionOpacity: 1 })}
+                onMouseLeave={() => this.setState({ visionOpacity: 0.5 })}
               >
                 VISION
               </button>
               <button
                 style={{
-                  opacity:  this.state.hoverAbout ? this.state.historyOpacity : 0,
+                  opacity: this.state.hoverAbout
+                    ? this.state.historyOpacity
+                    : 0,
                   pointerEvents: this.state.hoverAbout ? "auto" : "none"
                 }}
-                onClick={() => this.props.changePage("about", "history")}
+                onClick={() =>
+                  this.props.changePage(
+                    "about",
+                    "history",
+                    this.props.historyRef
+                  )
+                }
                 className="button2 navButton"
-                onMouseEnter={()=>this.setState({historyOpacity: 1})}
-                onMouseLeave={()=>this.setState({historyOpacity: 0.5})}
+                onMouseEnter={() => this.setState({ historyOpacity: 1 })}
+                onMouseLeave={() => this.setState({ historyOpacity: 0.5 })}
               >
                 HISTORY
               </button>
@@ -85,30 +97,62 @@ class Navbar extends Component {
               onMouseLeave={() => this.setState({ hoverBeliefs: false })}
             >
               <button
-                onClick={() => this.props.changePage("mission", "beliefs")}
+                onClick={() => this.props.changePage("beliefs")}
                 className="button4 navButton"
               >
                 BELIEFS
               </button>
               <button
                 style={{
-                  opacity:  this.state.hoverBeliefs ? this.state.valuesOpacity : 0,
+                  opacity: this.state.hoverBeliefs
+                    ? this.state.valuesOpacity
+                    : 0,
                   pointerEvents: this.state.hoverBeliefs ? "auto" : "none"
                 }}
-                onMouseEnter={()=>this.setState({valuesOpacity: 1})}
-                onMouseLeave={()=>this.setState({valuesOpacity: 0.5})}
-                onClick={() => this.props.changePage("mission")}
+                onMouseEnter={() => this.setState({ valuesOpacity: 1 })}
+                onMouseLeave={() => this.setState({ valuesOpacity: 0.5 })}
+                onClick={() =>
+                  this.props.changePage(
+                    "beliefs",
+                    "values",
+                    this.props.valuesRef
+                  )
+                }
                 className="button4 navButton"
               >
                 VALUES
               </button>
             </div>
-            <div className="buttonContainer">
+            <div
+              className="buttonContainer"
+              onMouseEnter={() => this.setState({ hoverEvents: true })}
+              onMouseLeave={() => this.setState({ hoverEvents: false })}
+            >
               <button
                 onClick={() => this.props.changePage("events")}
                 className="button5 navButton"
               >
                 EVENTS
+              </button>
+              <button
+                style={{
+                  opacity: this.state.hoverEvents
+                    ? this.state.valuesOpacity
+                    : 0,
+                  pointerEvents: this.state.hoverEvents ? "auto" : "none"
+                }}
+                onMouseEnter={() => this.setState({ valuesOpacity: 1 })}
+                onMouseLeave={() => this.setState({ valuesOpacity: 0.5 })}
+                onClick={() =>
+                  this.props.changePage(
+                    "events",
+                    "contact",
+                    this.props.contactRef
+                  )
+                }
+                className="button5 navButton"
+              >
+                CONTACT
               </button>
             </div>
           </div>
