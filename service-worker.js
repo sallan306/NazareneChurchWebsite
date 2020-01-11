@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/NazareneChurchWebsite/precache-manifest.ca1954955888c689e58e873e2ce56169.js"
+  "/NazareneChurchWebsite/precache-manifest.e16d30c49d7d07813c3685cea2cd2795.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/NazareneChurchWebsite/static/css/main.55da1b29.chunk.css",
-    "main.js": "/NazareneChurchWebsite/static/js/main.5d9ae96c.chunk.js",
-    "main.js.map": "/NazareneChurchWebsite/static/js/main.5d9ae96c.chunk.js.map",
+    "main.css": "/NazareneChurchWebsite/static/css/main.6823eceb.chunk.css",
+    "main.js": "/NazareneChurchWebsite/static/js/main.250c4aba.chunk.js",
+    "main.js.map": "/NazareneChurchWebsite/static/js/main.250c4aba.chunk.js.map",
     "runtime-main.js": "/NazareneChurchWebsite/static/js/runtime-main.9409427d.js",
     "runtime-main.js.map": "/NazareneChurchWebsite/static/js/runtime-main.9409427d.js.map",
-    "static/js/2.53a26327.chunk.js": "/NazareneChurchWebsite/static/js/2.53a26327.chunk.js",
-    "static/js/2.53a26327.chunk.js.map": "/NazareneChurchWebsite/static/js/2.53a26327.chunk.js.map",
+    "static/js/2.5a7a586b.chunk.js": "/NazareneChurchWebsite/static/js/2.5a7a586b.chunk.js",
+    "static/js/2.5a7a586b.chunk.js.map": "/NazareneChurchWebsite/static/js/2.5a7a586b.chunk.js.map",
     "index.html": "/NazareneChurchWebsite/index.html",
-    "precache-manifest.ca1954955888c689e58e873e2ce56169.js": "/NazareneChurchWebsite/precache-manifest.ca1954955888c689e58e873e2ce56169.js",
+    "precache-manifest.e16d30c49d7d07813c3685cea2cd2795.js": "/NazareneChurchWebsite/precache-manifest.e16d30c49d7d07813c3685cea2cd2795.js",
     "service-worker.js": "/NazareneChurchWebsite/service-worker.js",
-    "static/css/main.55da1b29.chunk.css.map": "/NazareneChurchWebsite/static/css/main.55da1b29.chunk.css.map",
+    "static/css/main.6823eceb.chunk.css.map": "/NazareneChurchWebsite/static/css/main.6823eceb.chunk.css.map",
     "static/media/BKBible.jpg": "/NazareneChurchWebsite/static/media/BKBible.bde50675.jpg",
     "static/media/BKCross.jpg": "/NazareneChurchWebsite/static/media/BKCross.348479e1.jpg",
     "static/media/BKCross2.jpg": "/NazareneChurchWebsite/static/media/BKCross2.12927233.jpg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9409427d.js",
-    "static/js/2.53a26327.chunk.js",
-    "static/css/main.55da1b29.chunk.css",
-    "static/js/main.5d9ae96c.chunk.js"
+    "static/js/2.5a7a586b.chunk.js",
+    "static/css/main.6823eceb.chunk.css",
+    "static/js/main.250c4aba.chunk.js"
   ]
 }
