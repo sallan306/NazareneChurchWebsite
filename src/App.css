@@ -200,6 +200,9 @@ body {
 
 @media only screen and (max-width: 600px) {
   /* --------------------------------------navbar------------------------------------------ */
+  body {
+    width: 100%;
+  }
   .Navbar {
     position: absolute;
     width: 100vw;
