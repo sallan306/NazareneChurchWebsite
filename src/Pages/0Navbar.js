@@ -75,20 +75,6 @@ class Navbar extends Component {
                 onClick={() => this.props.changePage("about")}
                 className="buttonAbout navButton"
               >
-                ABOUT
-              </button>
-              <button
-                style={{
-                  opacity: this.state.hoverAbout ? this.state.visionOpacity : 0,
-                  pointerEvents: this.state.hoverAbout ? "auto" : "none"
-                }}
-                onClick={() =>
-                  this.props.changePage("about", "vision", this.props.visionRef)
-                }
-                className="button2 navButton"
-                onMouseEnter={() => this.setState({ visionOpacity: 1 })}
-                onMouseLeave={() => this.setState({ visionOpacity: 0.5 })}
-              >
                 VISION
               </button>
               <button
@@ -195,7 +181,6 @@ class Navbar extends Component {
         <div
           className="navBanner"
           style={{
-            height: this.state.mobileExpanded ? 300 : 100,
             backgroundColor: this.state.mobileExpanded ? "lightgray" : "white"
           }}
         >
@@ -220,7 +205,8 @@ class Navbar extends Component {
           <div
             className="navButtonsContainer"
             style={{
-              opacity: this.state.mobileExpanded ? 0.9 : 0
+              height: this.state.mobileExpanded ? 400 : 0,
+              backgroundColor: this.state.mobileExpanded ? "lightgray" : "white"
             }}
           >
             <div className="buttonContainer">
@@ -236,19 +222,10 @@ class Navbar extends Component {
                 onClick={() => this.closeNav("about")}
                 className="buttonAbout navButton"
               >
-                ABOUT
-              </button>
-              <button
-                style={{
-                  pointerEvents: "auto"
-                }}
-                onClick={() =>
-                  this.closeNav("about", "vision", this.props.visionRef)
-                }
-                className="button2 navButton"
-              >
                 VISION
               </button>
+            </div>
+            <div className="buttonContainer">
               <button
                 style={{
                   pointerEvents: "auto"
@@ -276,6 +253,8 @@ class Navbar extends Component {
               >
                 BELIEFS
               </button>
+            </div>
+            <div className="buttonContainer">
               <button
                 style={{
                   pointerEvents: "auto"
@@ -295,6 +274,8 @@ class Navbar extends Component {
               >
                 EVENTS
               </button>
+            </div>
+            <div className="buttonContainer">
               <button
                 style={{
                   pointerEvents: "auto"

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import BKAbout from "../Resources/BKCross2.jpg";
 import BKVision from "../Resources/BKGirlPraying.jpg";
 import BKHistory from "../Resources/BKBible.jpg";
 import ParallaxCustom from "./ParallaxCustom";
@@ -21,28 +20,12 @@ class About extends Component {
     return (
       <div className="aboutPage">
         <div className="About">
-          <ParallaxCustom
-            title={"ABOUT"}
-            parallaxStrength={this.props.parallaxStrength}
-            BKIMGURL={BKAbout}
-            primary={true}
-            bgStyle={{ top: -100 }}
-          />
-          <div className="content contentAbout">
-            <h3 className="centeredh3">About Us</h3>
-            <p className="aboutParagraph">
-              The church of the Nazarine has been an upstanding member of the
-              cumminity for more than 500 years, and has been a blessing for the
-              lost and broken in the greater Kennewick area. Jesus loves you,
-              and so does the Church of the Nazarine
-            </p>
-          </div>
           <div className="Vision" ref={this.props.visionRef}>
             <ParallaxCustom
-              title={"VISION"}
+              title={"OUR VISION"}
               parallaxStrength={this.props.parallaxStrength}
               BKIMGURL={BKVision}
-              primary={false}
+              primary={true}
             />
             <div className="content contentVision">
               <h3 className="centeredh3">Our Mission</h3>

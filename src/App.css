@@ -200,6 +200,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   /* --------------------------------------navbar------------------------------------------ */
+
   body {
     width: 100%;
   }
@@ -214,6 +215,7 @@ body {
     height: 100px;
     text-align: center;
     transition: 0.5s;
+    outline-style: none;
   }
   .navLogoAndTitle {
     width: 100%;
@@ -227,6 +229,10 @@ body {
     position: relative;
     left: 0px;
     cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    user-select: none;
   }
   .navTitle {
     position: absolute;
@@ -240,6 +246,7 @@ body {
     float: right;
     width: 15%;
     cursor: pointer;
+    user-select: none;
   }
 
   .buttonHovered {
@@ -250,10 +257,13 @@ body {
     margin: 0px;
     width: 100%;
     transition: 0.5s;
+    overflow: hidden;
+    border-top: solid;
+    border-bottom: solid;
   }
   .buttonContainer {
-    float: left;
-    width: 20%;
+    float: none;
+    width: 100%;
     height: 50px;
   }
   .navButton {
@@ -331,7 +341,7 @@ body {
   /* --------------------------------------home------------------------------------------ */
 
   .App {
-    width: 100vw;
+    width: 100%;
   }
   /* --------------------------------------about------------------------------------------ */
 
@@ -340,9 +350,9 @@ body {
     height: 300px;
   }
 
-    /* --------------------------------------events------------------------------------------ */
+  /* --------------------------------------events------------------------------------------ */
 
-    .facebookWindow {
-      width: 100%;
-    }
+  .facebookWindow {
+    width: 100%;
+  }
 }
