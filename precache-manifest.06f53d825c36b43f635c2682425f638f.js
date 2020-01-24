@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "122c9a2bc8e9681a615b28dc2a8a4e0e",
+    "revision": "881d96c4ddc0ef58725fdd1442460739",
     "url": "/NazareneChurchWebsite/index.html"
   },
   {
-    "revision": "6ba502242a3f5c341a0e",
-    "url": "/NazareneChurchWebsite/static/css/main.6823eceb.chunk.css"
+    "revision": "a921217455905d612110",
+    "url": "/NazareneChurchWebsite/static/css/main.f31f1c7e.chunk.css"
   },
   {
-    "revision": "3013afb635d7ee7e126f",
-    "url": "/NazareneChurchWebsite/static/js/2.5a7a586b.chunk.js"
+    "revision": "8318ef310e0692d658de",
+    "url": "/NazareneChurchWebsite/static/js/2.746590cf.chunk.js"
   },
   {
-    "revision": "6ba502242a3f5c341a0e",
-    "url": "/NazareneChurchWebsite/static/js/main.250c4aba.chunk.js"
+    "revision": "a921217455905d612110",
+    "url": "/NazareneChurchWebsite/static/js/main.ce594912.chunk.js"
   },
   {
     "revision": "9d1149f17184c415a1de",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "348479e1a0edaad63801e9e2d37367ff",
     "url": "/NazareneChurchWebsite/static/media/BKCross.348479e1.jpg"
-  },
-  {
-    "revision": "12927233419cd9e67059edab1493c106",
-    "url": "/NazareneChurchWebsite/static/media/BKCross2.12927233.jpg"
   },
   {
     "revision": "5683fe8e01bd618e884c44e77ffd16f6",
