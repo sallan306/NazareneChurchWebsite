@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a8e6676f225b93e3b18f52b8937f48c",
+    "revision": "2745dc6289f5d6ca4f7c33ab33a184ee",
     "url": "/NazareneChurchWebsite/index.html"
   },
   {
-    "revision": "996d2677b6e0de6053f3",
-    "url": "/NazareneChurchWebsite/static/css/main.b79a405b.chunk.css"
+    "revision": "86dc4dea3bd8e6c821ba",
+    "url": "/NazareneChurchWebsite/static/css/main.533b33e5.chunk.css"
   },
   {
-    "revision": "7c9559633f577706f6f0",
-    "url": "/NazareneChurchWebsite/static/js/2.4230740d.chunk.js"
+    "revision": "19d0886ea2c15f8f5847",
+    "url": "/NazareneChurchWebsite/static/js/2.53e21c84.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/NazareneChurchWebsite/static/js/2.4230740d.chunk.js.LICENSE.txt"
+    "url": "/NazareneChurchWebsite/static/js/2.53e21c84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "996d2677b6e0de6053f3",
-    "url": "/NazareneChurchWebsite/static/js/main.b2982f10.chunk.js"
+    "revision": "86dc4dea3bd8e6c821ba",
+    "url": "/NazareneChurchWebsite/static/js/main.371a473f.chunk.js"
   },
   {
     "revision": "8b08616597df0d4914b0",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "348479e1a0edaad63801e9e2d37367ff",
     "url": "/NazareneChurchWebsite/static/media/BKCross.348479e1.jpg"
+  },
+  {
+    "revision": "dad8e4e96064f8f2cc386550ecbdc564",
+    "url": "/NazareneChurchWebsite/static/media/BKDearGodSepia.dad8e4e9.jpg"
   },
   {
     "revision": "5683fe8e01bd618e884c44e77ffd16f6",
