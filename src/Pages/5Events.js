@@ -64,8 +64,10 @@ class Events extends Component {
           <div className="content contentFacebook">
             <h2>Social</h2>
             <iframe
+              className="googleCalendar"
+              title="googleCalendar"
               src="https://calendar.google.com/calendar/embed?src=sallan306%40gmail.com&ctz=America%2FLos_Angeles"
-              style={{border: 0}}
+              style={{ border: 0 }}
               width={800}
               height={600}
               frameborder={0}

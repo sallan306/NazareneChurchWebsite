@@ -77,7 +77,7 @@ class App extends Component {
           <div className="navbarSpacer"></div>
           <Switch>
             <Route
-              path="/"
+              path="/(|NazareneChurchWebsite)"
               exact
               render={() => (
                 <Home screenWidth={this.state.screenWidth} isAuthed={true} />
