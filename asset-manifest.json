@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/NazareneChurchWebsite/static/css/main.f31f1c7e.chunk.css",
-    "main.js": "/NazareneChurchWebsite/static/js/main.ce594912.chunk.js",
-    "main.js.map": "/NazareneChurchWebsite/static/js/main.ce594912.chunk.js.map",
-    "runtime-main.js": "/NazareneChurchWebsite/static/js/runtime-main.9409427d.js",
-    "runtime-main.js.map": "/NazareneChurchWebsite/static/js/runtime-main.9409427d.js.map",
-    "static/js/2.746590cf.chunk.js": "/NazareneChurchWebsite/static/js/2.746590cf.chunk.js",
-    "static/js/2.746590cf.chunk.js.map": "/NazareneChurchWebsite/static/js/2.746590cf.chunk.js.map",
+    "main.css": "/NazareneChurchWebsite/static/css/main.5f32fedf.chunk.css",
+    "main.js": "/NazareneChurchWebsite/static/js/main.8cbbbc18.chunk.js",
+    "main.js.map": "/NazareneChurchWebsite/static/js/main.8cbbbc18.chunk.js.map",
+    "runtime-main.js": "/NazareneChurchWebsite/static/js/runtime-main.d6bb5e99.js",
+    "runtime-main.js.map": "/NazareneChurchWebsite/static/js/runtime-main.d6bb5e99.js.map",
+    "static/js/2.df5e070b.chunk.js": "/NazareneChurchWebsite/static/js/2.df5e070b.chunk.js",
+    "static/js/2.df5e070b.chunk.js.map": "/NazareneChurchWebsite/static/js/2.df5e070b.chunk.js.map",
     "index.html": "/NazareneChurchWebsite/index.html",
-    "precache-manifest.06f53d825c36b43f635c2682425f638f.js": "/NazareneChurchWebsite/precache-manifest.06f53d825c36b43f635c2682425f638f.js",
+    "precache-manifest.4eda8bde26a9a94f926b7a07c0312fd5.js": "/NazareneChurchWebsite/precache-manifest.4eda8bde26a9a94f926b7a07c0312fd5.js",
     "service-worker.js": "/NazareneChurchWebsite/service-worker.js",
-    "static/css/main.f31f1c7e.chunk.css.map": "/NazareneChurchWebsite/static/css/main.f31f1c7e.chunk.css.map",
+    "static/css/main.5f32fedf.chunk.css.map": "/NazareneChurchWebsite/static/css/main.5f32fedf.chunk.css.map",
+    "static/js/2.df5e070b.chunk.js.LICENSE.txt": "/NazareneChurchWebsite/static/js/2.df5e070b.chunk.js.LICENSE.txt",
     "static/media/BKBible.jpg": "/NazareneChurchWebsite/static/media/BKBible.bde50675.jpg",
     "static/media/BKCross.jpg": "/NazareneChurchWebsite/static/media/BKCross.348479e1.jpg",
     "static/media/BKGirlPraying.jpg": "/NazareneChurchWebsite/static/media/BKGirlPraying.5683fe8e.jpg",
@@ -22,9 +23,9 @@
     "static/media/pastor.jpg": "/NazareneChurchWebsite/static/media/pastor.74829385.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9409427d.js",
-    "static/js/2.746590cf.chunk.js",
-    "static/css/main.f31f1c7e.chunk.css",
-    "static/js/main.ce594912.chunk.js"
+    "static/js/runtime-main.d6bb5e99.js",
+    "static/js/2.df5e070b.chunk.js",
+    "static/css/main.5f32fedf.chunk.css",
+    "static/js/main.8cbbbc18.chunk.js"
   ]
 }
