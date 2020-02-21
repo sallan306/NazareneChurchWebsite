@@ -12,14 +12,21 @@ class NavbarDesktop extends Component {
           }
         >
           <div className="navLogoAndTitle">
-            <img alt="logo" className="navLogo" src={Logo}></img>
+            <Link to="/">
+              <img
+                alt="logo"
+                className="navLogo"
+                src={Logo}
+                onClick={() => this.props.closeNavAndChangePage("home")}
+              ></img>
+            </Link>
             <Link
               to="/"
               className="navTitle"
               onClick={() => this.props.closeNavAndChangePage("home")}
             >
               <p className="navTitleStorypoint">Storypoint</p>
-              <p className="navTitleSubtext">A Church of the Nazarine</p>
+              <p className="navTitleSubtext">A Church of the Nazarene</p>
             </Link>
           </div>
           <div className="navButtonsContainer">
@@ -36,8 +43,12 @@ class NavbarDesktop extends Component {
             </div>
             <div
               className="buttonContainer"
-              onMouseEnter={() => this.props.handleChangeState("hoverAbout", true)}
-              onMouseLeave={() => this.props.handleChangeState("hoverAbout", false)}
+              onMouseEnter={() =>
+                this.props.handleChangeState("hoverAbout", true)
+              }
+              onMouseLeave={() =>
+                this.props.handleChangeState("hoverAbout", false)
+              }
             >
               <Link
                 to="/vision"
@@ -63,8 +74,12 @@ class NavbarDesktop extends Component {
                     : 0,
                   pointerEvents: this.props.hoverAbout ? "auto" : "none"
                 }}
-                onMouseEnter={() => this.props.handleChangeState( "historyOpacity", 1 )}
-                onMouseLeave={() => this.props.handleChangeState( "historyOpacity", 0.5 )}
+                onMouseEnter={() =>
+                  this.props.handleChangeState("historyOpacity", 1)
+                }
+                onMouseLeave={() =>
+                  this.props.handleChangeState("historyOpacity", 0.5)
+                }
               >
                 HISTORY
               </Link>
@@ -80,8 +95,12 @@ class NavbarDesktop extends Component {
             </div>
             <div
               className="buttonContainer"
-              onMouseEnter={() => this.props.handleChangeState( "hoverBeliefs", true )}
-              onMouseLeave={() => this.props.handleChangeState( "hoverBeliefs", false )}
+              onMouseEnter={() =>
+                this.props.handleChangeState("hoverBeliefs", true)
+              }
+              onMouseLeave={() =>
+                this.props.handleChangeState("hoverBeliefs", false)
+              }
             >
               <Link
                 to="/beliefs"
@@ -106,16 +125,24 @@ class NavbarDesktop extends Component {
                     : 0,
                   pointerEvents: this.props.hoverBeliefs ? "auto" : "none"
                 }}
-                onMouseEnter={() => this.props.handleChangeState({ valuesOpacity: 1 })}
-                onMouseLeave={() => this.props.handleChangeState({ valuesOpacity: 0.5 })}
+                onMouseEnter={() =>
+                  this.props.handleChangeState({ valuesOpacity: 1 })
+                }
+                onMouseLeave={() =>
+                  this.props.handleChangeState({ valuesOpacity: 0.5 })
+                }
               >
                 VALUES
               </Link>
             </div>
             <div
               className="buttonContainer"
-              onMouseEnter={() => this.props.handleChangeState( "hoverEvents", true )}
-              onMouseLeave={() => this.props.handleChangeState( "hoverEvents", false )}
+              onMouseEnter={() =>
+                this.props.handleChangeState("hoverEvents", true)
+              }
+              onMouseLeave={() =>
+                this.props.handleChangeState("hoverEvents", false)
+              }
             >
               <Link
                 to="/events"
@@ -128,7 +155,7 @@ class NavbarDesktop extends Component {
                 to="/events"
                 className="button5 navButton"
                 onClick={() =>
-                  this.props.changeSubPage(
+                  this.props.closeNavAndChangePage(
                     "events",
                     "contact",
                     this.props.contactRef
@@ -140,8 +167,12 @@ class NavbarDesktop extends Component {
                     : 0,
                   pointerEvents: this.props.hoverEvents ? "auto" : "none"
                 }}
-                onMouseEnter={() => this.props.handleChangeState("valuesOpacity", 1 )}
-                onMouseLeave={() => this.props.handleChangeState("valuesOpacity",0.5 )}
+                onMouseEnter={() =>
+                  this.props.handleChangeState("valuesOpacity", 1)
+                }
+                onMouseLeave={() =>
+                  this.props.handleChangeState("valuesOpacity", 0.5)
+                }
               >
                 CONTACT
               </Link>

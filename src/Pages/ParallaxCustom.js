@@ -36,7 +36,7 @@ class ParallaxCustom extends Component {
         >
           <div className="parallaxContent">
             <div className="parallaxTitleContainer">
-              <div className="parallaxTitle">{this.props.title}</div>
+              <div className={"parallaxTitle parallaxTitle"+this.props.title}>{this.props.title}</div>
             </div>
             {this.props.primary ? (
               <div className="parallaxSizePrimary" />

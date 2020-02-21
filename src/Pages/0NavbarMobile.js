@@ -27,7 +27,7 @@ class NavbarMobile extends Component {
               onClick={() => this.props.closeNavAndChangePage("home")}
             >
               <p className="navTitleStorypoint">Storypoint</p>
-              <p className="navTitleSubtext">A Church of the Nazarine</p>
+              <p className="navTitleSubtext">A Church of the Nazarene</p>
             </Link>
             <div className="menuBarContainer" onClick={this.props.toggleNavMenu}>
               <div className={this.props.bar1Class}></div>

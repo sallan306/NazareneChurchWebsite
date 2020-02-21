@@ -4,7 +4,8 @@ import SheriMartin from "../Resources/SheriMartin.jpg";
 import PattyArmstrong from "../Resources/PattyArmstrong.jpg";
 import RuthTodd from "../Resources/RuthTodd.jpg";
 import NikkiHouston from "../Resources/NikkiHouston.jpg";
-import BKContact from "../Resources/BKHoldingHands.jpg";
+import BKEvents from "../Resources/BKHoldingHands.jpg";
+import BKContact from "../Resources/BKDearGodSepia.jpg";
 import ParallaxCustom from "./ParallaxCustom";
 const contactList = [
   {
@@ -46,7 +47,7 @@ const contactList = [
 ];
 class Events extends Component {
   componentDidMount() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
   createContactList = () => {};
   render() {
@@ -56,22 +57,20 @@ class Events extends Component {
           <ParallaxCustom
             title={"EVENTS"}
             parallaxStrength={this.props.parallaxStrength}
-            BKIMGURL={BKContact}
+            BKIMGURL={BKEvents}
             primary={true}
             bgStyle={{ top: 0 }}
           />
           <div className="content contentFacebook">
             <h2>Social</h2>
             <iframe
-              className="facebookWindow"
-              title="facebook"
-              src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/StoryPointComunityChurchOfTheNazarene&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-              width="500"
-              height="400"
-              scrolling="yes"
-              frameBorder="0"
-              allow="encrypted-media"
-            />
+              src="https://calendar.google.com/calendar/embed?src=sallan306%40gmail.com&ctz=America%2FLos_Angeles"
+              style={{border: 0}}
+              width={800}
+              height={600}
+              frameborder={0}
+              scrolling="no"
+            ></iframe>
           </div>
         </div>
         <div className="Contact" ref={this.props.contactRef}>
@@ -109,7 +108,7 @@ class Events extends Component {
                       <h2 className="contactName">{contact.name}</h2>
                       <div className="contactBio">
                         <p>{contact.role}</p>
-                        <p>{contact.email}</p>
+                        <a href={"mailto:" + contact.email}>{contact.email}</a>
                         {contact.phone ? <p>{contact.phone}</p> : ""}
                       </div>
                     </div>
