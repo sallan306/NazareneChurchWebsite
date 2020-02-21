@@ -68,11 +68,13 @@ class Events extends Component {
               title="googleCalendar"
               src="https://calendar.google.com/calendar/embed?src=sallan306%40gmail.com&ctz=America%2FLos_Angeles"
               style={{ border: 0 }}
-              width={800}
-              height={600}
+              width={this.props.screenWidth > 600 ? 800 : 375}
+              height={this.props.screenWidth > 600 ? 600 : 450}
               frameborder={0}
-              scrolling="no"
-            ></iframe>
+              scrolling="yes"
+            />
+            <div className="footerWhiteSpace" />
+            <div className="footerWhiteSpace" />
           </div>
         </div>
         <div className="Contact" ref={this.props.contactRef}>

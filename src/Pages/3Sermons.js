@@ -24,8 +24,8 @@ class Sermons extends Component {
           <h3 className="centeredh3">Sermon Podcast</h3>
           <iframe
             title="SoundCloud"
-            width="80%"
-            height="400"
+            width={this.props.screenWidth > 600 ? "85%" : "95%"}
+            height={this.props.screenWidth > 600 ? 400 : 600}
             scrolling="yes"
             frameBorder="no"
             allow="autoplay"

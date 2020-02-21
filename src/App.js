@@ -47,15 +47,14 @@ class App extends Component {
       },
       () => {
         if (ref.current !== null) {
-          if(this.state.screenWidth < 600) {
+          if (this.state.screenWidth < 600) {
             window.scrollTo(0, ref.current.offsetTop);
-          }
-          else {
-            window.scrollTo(0, ref.current.offsetTop+100);
+          } else {
+            window.scrollTo(0, ref.current.offsetTop + 100);
           }
           console.log("changesubpage", ref);
         }
-        this.setState({currentSubPage: null})
+        this.setState({ currentSubPage: null });
       }
     );
   };
@@ -96,15 +95,21 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/sermons" exact component={Sermons} />
+            <Route
+              path="/sermons"
+              exact
+              render={() => (
+                <Sermons screenWidth={this.state.screenWidth} isAuthed={true} />
+              )}
+            />
             <Route
               path="/beliefs"
               exact
               render={() => (
                 <Beliefs
                   currentSubPage={this.state.currentSubPage}
-                  screenWidth={this.state.screenWidth}
                   valuesRef={this.valuesRef}
+                  screenWidth={this.state.screenWidth}
                   isAuthed={true}
                 />
               )}

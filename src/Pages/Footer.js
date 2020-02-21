@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { SocialIcon } from "react-social-icons";
 class Footer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isRotating: false
+    };
+  }
   render() {
     return (
       <div className="footerContainer">
@@ -14,7 +20,6 @@ class Footer extends Component {
                 Kennewick, WA 99336
               </p>
             </div>
-
             <div className="address">
               <h5 className="footerAddressType">Mailing Address </h5>
               <p className="footerAddress">
@@ -55,9 +60,31 @@ class Footer extends Component {
                 height="1"
               />
             </form>
-            <SocialIcon url="https://www.facebook.com/StoryPointComunityChurchOfTheNazarene" />
-
-            <SocialIcon network="email" url="info@storypoint.info" />
+            {/* <SocialIcon url="https://www.facebook.com/StoryPointComunityChurchOfTheNazarene" /> */}
+            {/* <SocialIcon network="email" url="info@storypoint.info" /> */}
+            <div
+              className="mySignature"
+              style={{
+                transition: "0.9s",
+                color: this.state.isRotating ? "blue" : "black"
+              }}
+            >
+              Website Built By Scott Allan
+              <SocialIcon
+                onMouseEnter={() => this.setState({ isRotating: true })}
+                onMouseLeave={() => this.setState({ isRotating: false })}
+                style={{
+                  height: 15,
+                  width: 15,
+                  transition: "0.9s",
+                  transform: this.state.isRotating
+                    ? "rotateY(180deg)"
+                    : "rotateY(0deg)"
+                }}
+                network="email"
+                url="sallan306@gmail.com"
+              />
+            </div>
           </div>
         </div>
       </div>
