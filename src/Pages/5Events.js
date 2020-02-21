@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import PastorImg from "../Resources/pastor.jpg";
+import DanMartin from "../Resources/DanMartin.jpg";
+import SheriMartin from "../Resources/SheriMartin.jpg";
+import PattyArmstrong from "../Resources/PattyArmstrong.jpg";
+import RuthTodd from "../Resources/RuthTodd.jpg";
+import NikkiHouston from "../Resources/NikkiHouston.jpg";
 import BKContact from "../Resources/BKHoldingHands.jpg";
 import ParallaxCustom from "./ParallaxCustom";
 const contactList = [
@@ -8,35 +12,35 @@ const contactList = [
     name: "Dan Martin",
     email: "dan@storypoint.info",
     phone: "509.619.5472",
-    imgURL: PastorImg,
+    imgURL: DanMartin,
     index: 1
   },
   {
     role: "Children’s Ministry Leader",
     name: "Sheri Martin",
     email: "sheri@storypoint.info",
-    imgURL: PastorImg,
+    imgURL: SheriMartin,
     index: 2
   },
   {
     role: "Associate Pastor",
     name: "Patty Armstrong",
     email: "patty@storypoint.info",
-    imgURL: PastorImg,
+    imgURL: PattyArmstrong,
     index: 3
   },
   {
-    role: "Worship Ministry",
-    name: "Larry Henderson & Nikki Perkins",
+    role: "Outreach Pastor",
+    name: "Ruth Todd",
     email: "worship@storypoint.info",
-    imgURL: PastorImg,
+    imgURL: RuthTodd,
     index: 4
   },
   {
-    role: "Media/Web Ministry",
-    name: "Tom Egelhoff",
-    email: "tom@storypoint.info",
-    imgURL: PastorImg,
+    role: "Worship Leader",
+    name: "Nikki Houston",
+    email: "worship@storypoint.info",
+    imgURL: NikkiHouston,
     index: 5
   }
 ];
