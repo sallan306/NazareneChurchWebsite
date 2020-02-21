@@ -7,7 +7,9 @@ class Sermons extends Component {
     super();
     this.state = {};
   }
-
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="Sermons">
@@ -16,6 +18,7 @@ class Sermons extends Component {
           parallaxStrength={this.props.parallaxStrength}
           BKIMGURL={BKSermons}
           primary={true}
+          bgStyle={{ top: 0 }}
         />
         <div className="content contentSermons">
           <h3 className="centeredh3">Sermon Podcast</h3>

@@ -10,22 +10,19 @@ class About extends Component {
   }
 
   componentDidMount() {
-    if (this.props.currentSubPage === "vision") {
-      window.scrollTo(0, this.props.visionRef.current.offsetTop + 100);
-    } else if (this.props.currentSubPage === "history") {
-      window.scrollTo(0, this.props.historyRef.current.offsetTop + 100);
-    }
+    window.scrollTo(0,0);
   }
   render() {
     return (
       <div className="aboutPage">
         <div className="About">
-          <div className="Vision" ref={this.props.visionRef}>
+          <div className="Vision">
             <ParallaxCustom
               title={"OUR VISION"}
               parallaxStrength={this.props.parallaxStrength}
               BKIMGURL={BKVision}
               primary={true}
+              bgStyle={{ top: 0 }}
             />
             <div className="content contentVision">
               <h3 className="centeredh3">Our Mission</h3>

@@ -9,9 +9,8 @@ class Beliefs extends Component {
     this.state = {};
   }
   componentDidMount() {
-    if (this.props.currentSubPage === "values") {
-      window.scrollTo(0, this.props.valuesRef.current.offsetTop + 100);
-    }
+    window.scrollTo(0, 0);
+
   }
   render() {
     return (
@@ -22,6 +21,7 @@ class Beliefs extends Component {
             parallaxStrength={this.props.parallaxStrength}
             BKIMGURL={BKBeliefs}
             primary={true}
+            bgStyle={{ top: 0 }}
           />
           <div className="content contentBeliefs">
             <ul className="ourBeliefs">

@@ -8,17 +8,30 @@ class Home extends Component {
     super();
     this.state = {};
   }
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
 
   render() {
     return (
       <div className="Home">
-        <ParallaxCustom
-          title={"WELCOME"}
-          parallaxStrength={this.props.parallaxStrength}
-          BKIMGURL={BKPrimary}
-          primary={true}
-          bgStyle={{ top: 50 }}
-        />
+        {this.props.screenWidth > 600 ? (
+          <ParallaxCustom
+            title={"WELCOME"}
+            parallaxStrength={this.props.parallaxStrength}
+            BKIMGURL={BKPrimary}
+            primary={true}
+            bgStyle={{ top: 0 }}
+          />
+        ) : (
+          <ParallaxCustom
+            title={"WELCOME"}
+            parallaxStrength={this.props.parallaxStrength}
+            BKIMGURL={BKPrimary}
+            primary={true}
+            bgStyle={{ top: 0 }}
+          />
+        )}
         <div className="content contentHome">
           <h3 className="centeredh3">Who</h3>
           <p>
@@ -44,7 +57,6 @@ class Home extends Component {
             style={{ border: 0 }}
             allowFullScreen=""
           ></iframe>
-
         </div>
       </div>
     );

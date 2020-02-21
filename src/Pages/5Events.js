@@ -41,14 +41,8 @@ const contactList = [
   }
 ];
 class Events extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   componentDidMount() {
-    if (this.props.currentSubPage === "contact") {
-      window.scrollTo(0, this.props.contactRef.current.offsetTop + 100);
-    }
+    window.scrollTo(0,0);
   }
   createContactList = () => {};
   render() {
@@ -60,7 +54,7 @@ class Events extends Component {
             parallaxStrength={this.props.parallaxStrength}
             BKIMGURL={BKContact}
             primary={true}
-            bgStyle={{ top: 100 }}
+            bgStyle={{ top: 0 }}
           />
           <div className="content contentFacebook">
             <h2>Social</h2>
@@ -70,7 +64,6 @@ class Events extends Component {
               src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/StoryPointComunityChurchOfTheNazarene&tabs=timeline&width=500&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
               width="500"
               height="400"
-              // style={{ border: "none", overflow: "hidden" }}
               scrolling="yes"
               frameBorder="0"
               allow="encrypted-media"
@@ -83,7 +76,7 @@ class Events extends Component {
             parallaxStrength={this.props.parallaxStrength}
             BKIMGURL={BKContact}
             primary={false}
-            bgStyle={{ top: 100 }}
+            bgStyle={{ top: 0 }}
           />
           <div className="content contentContact">
             <h2>Our Staff</h2>
