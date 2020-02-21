@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3bc803dbe9921e9f85188712a8eb3836",
+    "revision": "0a8e6676f225b93e3b18f52b8937f48c",
     "url": "/NazareneChurchWebsite/index.html"
   },
   {
-    "revision": "2ba23b28eee9a3e5a51d",
-    "url": "/NazareneChurchWebsite/static/css/main.5f32fedf.chunk.css"
+    "revision": "996d2677b6e0de6053f3",
+    "url": "/NazareneChurchWebsite/static/css/main.b79a405b.chunk.css"
   },
   {
-    "revision": "8880e41f7f97182106a5",
-    "url": "/NazareneChurchWebsite/static/js/2.df5e070b.chunk.js"
+    "revision": "7c9559633f577706f6f0",
+    "url": "/NazareneChurchWebsite/static/js/2.4230740d.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/NazareneChurchWebsite/static/js/2.df5e070b.chunk.js.LICENSE.txt"
+    "url": "/NazareneChurchWebsite/static/js/2.4230740d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2ba23b28eee9a3e5a51d",
-    "url": "/NazareneChurchWebsite/static/js/main.8cbbbc18.chunk.js"
+    "revision": "996d2677b6e0de6053f3",
+    "url": "/NazareneChurchWebsite/static/js/main.b2982f10.chunk.js"
   },
   {
     "revision": "8b08616597df0d4914b0",
@@ -52,11 +52,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/NazareneChurchWebsite/static/media/BKWorshipService.40acdf60.jpg"
   },
   {
-    "revision": "3e6a52eae01b99839c0cce81d1bcf67d",
-    "url": "/NazareneChurchWebsite/static/media/logo.3e6a52ea.png"
+    "revision": "e7b0afb73facc08472784b60ade70140",
+    "url": "/NazareneChurchWebsite/static/media/DanMartin.e7b0afb7.jpg"
   },
   {
-    "revision": "748293851eb391ac5df082ec1d96227d",
-    "url": "/NazareneChurchWebsite/static/media/pastor.74829385.jpg"
+    "revision": "b99e2369a2a872d0b2bb805bff547418",
+    "url": "/NazareneChurchWebsite/static/media/NikkiHouston.b99e2369.jpg"
+  },
+  {
+    "revision": "f2382df9f94a51e7b85dc01e05c3fd59",
+    "url": "/NazareneChurchWebsite/static/media/PattyArmstrong.f2382df9.jpg"
+  },
+  {
+    "revision": "47f69e82c0a2c3c9039450e7dd3d163a",
+    "url": "/NazareneChurchWebsite/static/media/RuthTodd.47f69e82.jpg"
+  },
+  {
+    "revision": "83cb4a84ae98d78c64d884f585034f5d",
+    "url": "/NazareneChurchWebsite/static/media/SheriMartin.83cb4a84.jpg"
+  },
+  {
+    "revision": "3e6a52eae01b99839c0cce81d1bcf67d",
+    "url": "/NazareneChurchWebsite/static/media/logo.3e6a52ea.png"
   }
 ]);
