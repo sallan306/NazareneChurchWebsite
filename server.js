@@ -1,8 +1,12 @@
+const path = require('path')
 const express = require('express');
 const fileUpload = require ('express-fileupload')
-
 const app = express();
+const port = process.env.PORT || 3000;
+const publicPath = path.join(__dirname, '..', 'public');
 
+
+app.use(express.static(publicPath));
 app.use(fileUpload());
 app.use(require('prerender-node'));
 
@@ -23,5 +27,7 @@ app.post('/upload', (req, res) => {
         res.json({ fileName: file.name, filePath: `/uploads/${file.name}`})
     })
 })
-
-app.listen(5000, ()=> console.log('Server Started'))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+ });
+app.listen(port, ()=> console.log(`Server is up on port ${port}!`))
