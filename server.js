@@ -4,7 +4,10 @@ const fileUpload = require("express-fileupload");
 const app = express();
 const port = process.env.PORT || 8080;
 const publicPath = path.join(__dirname, "..", "public");
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(publicPath));
 app.use(fileUpload());
 app.use(require("prerender-node"));
@@ -29,7 +32,11 @@ app.post("/upload", (req, res) => {
     res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
   });
 });
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.get("*", (req, res) => {
-  res.sendFile(path.join(publicPath, "index.html"));
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 app.listen(port, () => console.log(`Server is up on port ${port}!`));
