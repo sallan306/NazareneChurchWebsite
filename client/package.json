@@ -28,6 +28,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
+  "proxy": "http://localhost:8080",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -43,7 +44,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
   "devDependencies": {
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
