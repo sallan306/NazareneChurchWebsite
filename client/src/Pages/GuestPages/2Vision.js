@@ -53,7 +53,9 @@ class About extends Component {
                 We encourage new family members to watch the video below to
                 better understand our core values
               </h3>
-              {/* <iframe
+              <iframe
+                title="pictures"
+                className="googlePicturesSlideshow"
                 src="https://docs.google.com/presentation/d/e/2PACX-1vRhzbRaU9Ys2ZrD3NxjOmD0VBcpcRmu3PdJWkqfjLttZ7ibSY2_XDPHuF8TV-g9ohxj0V4DDFbo1GU0/embed?start=true&loop=true&delayms=3000"
                 frameBorder="0"
                 width="960"
@@ -61,7 +63,7 @@ class About extends Component {
                 allowFullScreen="true"
                 mozAllowFullScreen="true"
                 webkitAllowFullScreen="true"
-              ></iframe> */}
+              ></iframe>
               <iframe
                 className="youtubeWindow"
                 title="slideshow"
