@@ -3,7 +3,6 @@ import Logo from "../../Resources/logo.png";
 import { Link } from "react-router-dom";
 
 class NavbarDesktop extends Component {
-  
   render() {
     return (
       <div className="Navbar">
@@ -38,7 +37,7 @@ class NavbarDesktop extends Component {
                   this.props.closeNavAndChangePage();
                 }}
               >
-               PICTURES
+                SLIDESHOW
               </Link>
             </div>
             <div className="buttonContainer">
@@ -49,7 +48,18 @@ class NavbarDesktop extends Component {
                   this.props.closeNavAndChangePage();
                 }}
               >
-               EDIT EVENTS
+                EDIT EVENTS
+              </Link>
+            </div>
+            <div className="buttonContainer">
+              <Link
+                to="/"
+                className="buttonHome navButton"
+                onClick={() => {
+                  this.props.logOut();
+                }}
+              >
+                LOG OUT
               </Link>
             </div>
           </div>

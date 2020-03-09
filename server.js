@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(publicPath));
+app.use('/static', express.static(path.join(__dirname, 'client/build')));
 app.use(fileUpload());
 app.use(require("prerender-node"));
 app.get("/api/getList", (req, res) => {
@@ -16,6 +16,7 @@ app.get("/api/getList", (req, res) => {
   res.json(list);
   console.log("Sent list of items");
 });
+
 app.post("/upload", (req, res) => {
   if (req.files == null) {
     return res.status(400).json({ msg: "no file was uploaded" });

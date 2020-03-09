@@ -10,7 +10,7 @@ class About extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
   render() {
     return (
@@ -18,7 +18,7 @@ class About extends Component {
         <div className="About">
           <div className="Vision">
             <ParallaxCustom
-              title={"OUR VISION"}
+              title={"ABOUT US"}
               parallaxStrength={this.props.parallaxStrength}
               BKIMGURL={BKVision}
               primary={true}
@@ -53,6 +53,15 @@ class About extends Component {
                 We encourage new family members to watch the video below to
                 better understand our core values
               </h3>
+              {/* <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vRhzbRaU9Ys2ZrD3NxjOmD0VBcpcRmu3PdJWkqfjLttZ7ibSY2_XDPHuF8TV-g9ohxj0V4DDFbo1GU0/embed?start=true&loop=true&delayms=3000"
+                frameBorder="0"
+                width="960"
+                height="569"
+                allowFullScreen="true"
+                mozAllowFullScreen="true"
+                webkitAllowFullScreen="true"
+              ></iframe> */}
               <iframe
                 className="youtubeWindow"
                 title="slideshow"

@@ -94,6 +94,7 @@ class App extends Component {
             currentPage={this.state.currentPage}
             currentSubPage={this.state.currentSubPage}
             isLoggedIn={this.state.isLoggedIn}
+            logOut={this.logOut}
           />
           <div className="navbarSpacer"></div>
           <Switch>
@@ -163,14 +164,24 @@ class App extends Component {
             <Route
               path="/editevents"
               exact
-              render={() => (
-                <EditEvents
-                  currentSubPage={this.state.currentSubPage}
-                  screenWidth={this.state.screenWidth}
-                  contactRef={this.contactRef}
-                  isAuthed={true}
-                />
-              )}
+              render={() =>
+                this.state.isLoggedIn ? (
+                  <EditEvents
+                    currentSubPage={this.state.currentSubPage}
+                    screenWidth={this.state.screenWidth}
+                    contactRef={this.contactRef}
+                    isAuthed={true}
+                  />
+                ) : (
+                  <LogIn
+                    {...this.state}
+                    logIn={this.logIn}
+                    screenWidth={this.state.screenWidth}
+                    isAuthed={true}
+                    isLoggedIn={this.state.isLoggedIn}
+                  />
+                )
+              }
             />
             <Route
               path="/pictureupload"

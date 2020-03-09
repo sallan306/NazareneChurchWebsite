@@ -116,6 +116,7 @@ class Navbar extends Component {
           closeNav={this.closeNav}
           closeNavAndChangePage={this.closeNavAndChangePage}
           handleChangeState={this.handleChangeState}
+          logOut={this.props.logOut}
           {...this.state}
         />
       )
