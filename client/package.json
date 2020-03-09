@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "main": "server.js",
+  "engines": {
+    "node": "10.15.3"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
