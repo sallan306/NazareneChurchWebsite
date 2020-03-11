@@ -37,7 +37,7 @@ class NavbarDesktop extends Component {
                   this.props.closeNavAndChangePage();
                 }}
               >
-                SLIDESHOW
+                EDIT SLIDESHOW
               </Link>
             </div>
             <div className="buttonContainer">

@@ -71,6 +71,7 @@ class App extends Component {
       }
     );
   };
+
   render() {
     return (
       <BrowserRouter>
@@ -98,81 +99,17 @@ class App extends Component {
           />
           <div className="navbarSpacer"></div>
           <Switch>
-            <Route
-              path="/(|NazareneChurchWebsite)"
-              exact
-              render={() => (
-                <Home screenWidth={this.state.screenWidth} isAuthed={true} />
-              )}
-            />
-            <Route
-              path="/login"
-              exact
-              render={() => (
-                <LogIn
-                  {...this.state}
-                  logIn={this.logIn}
-                  screenWidth={this.state.screenWidth}
-                  isAuthed={true}
-                  isLoggedIn={this.state.isLoggedIn}
-                />
-              )}
-            />
-            <Route
-              path="/vision"
-              exact
-              render={() => (
-                <Vision
-                  currentSubPage={this.state.currentSubPage}
-                  screenWidth={this.state.screenWidth}
-                  historyRef={this.historyRef}
-                  isAuthed={true}
-                />
-              )}
-            />
-            <Route
-              path="/sermons"
-              exact
-              render={() => (
-                <Sermons screenWidth={this.state.screenWidth} isAuthed={true} />
-              )}
-            />
-            <Route
-              path="/beliefs"
-              exact
-              render={() => (
-                <Beliefs
-                  currentSubPage={this.state.currentSubPage}
-                  valuesRef={this.valuesRef}
-                  screenWidth={this.state.screenWidth}
-                  isAuthed={true}
-                />
-              )}
-            />
-            <Route
-              path="/events"
-              exact
-              render={() => (
-                <Events
-                  currentSubPage={this.state.currentSubPage}
-                  screenWidth={this.state.screenWidth}
-                  contactRef={this.contactRef}
-                  isAuthed={true}
-                />
-              )}
-            />
-            <Route
-              path="/editevents"
-              exact
-              render={() =>
-                this.state.isLoggedIn ? (
-                  <EditEvents
-                    currentSubPage={this.state.currentSubPage}
-                    screenWidth={this.state.screenWidth}
-                    contactRef={this.contactRef}
-                    isAuthed={true}
-                  />
-                ) : (
+              <Route
+                path="/(|NazareneChurchWebsite)"
+                exact
+                render={() => (
+                  <Home screenWidth={this.state.screenWidth} isAuthed={true} />
+                )}
+              />
+              <Route
+                path="/login"
+                exact
+                render={() => (
                   <LogIn
                     {...this.state}
                     logIn={this.logIn}
@@ -180,32 +117,100 @@ class App extends Component {
                     isAuthed={true}
                     isLoggedIn={this.state.isLoggedIn}
                   />
-                )
-              }
-            />
-            <Route
-              path="/pictureupload"
-              exact
-              render={() =>
-                this.state.isLoggedIn ? (
-                  <PictureUpload
+                )}
+              />
+              <Route
+                path="/vision"
+                exact
+                render={() => (
+                  <Vision
+                    currentSubPage={this.state.currentSubPage}
+                    screenWidth={this.state.screenWidth}
+                    historyRef={this.historyRef}
+                    isAuthed={true}
+                  />
+                )}
+              />
+              <Route
+                path="/sermons"
+                exact
+                render={() => (
+                  <Sermons
+                    screenWidth={this.state.screenWidth}
+                    isAuthed={true}
+                  />
+                )}
+              />
+              <Route
+                path="/beliefs"
+                exact
+                render={() => (
+                  <Beliefs
+                    currentSubPage={this.state.currentSubPage}
+                    valuesRef={this.valuesRef}
+                    screenWidth={this.state.screenWidth}
+                    isAuthed={true}
+                  />
+                )}
+              />
+              <Route
+                path="/events"
+                exact
+                render={() => (
+                  <Events
                     currentSubPage={this.state.currentSubPage}
                     screenWidth={this.state.screenWidth}
                     contactRef={this.contactRef}
                     isAuthed={true}
                   />
-                ) : (
-                  <LogIn
-                    {...this.state}
-                    logIn={this.logIn}
-                    screenWidth={this.state.screenWidth}
-                    isAuthed={true}
-                    isLoggedIn={this.state.isLoggedIn}
-                  />
-                )
-              }
-            />
-            <Route path="/" render={() => <div>404 Page Not Found</div>} />
+                )}
+              />
+              <Route
+                path="/editevents"
+                exact
+                render={() =>
+                  this.state.isLoggedIn ? (
+                    <EditEvents
+                      currentSubPage={this.state.currentSubPage}
+                      screenWidth={this.state.screenWidth}
+                      contactRef={this.contactRef}
+                      isAuthed={true}
+                      createNotification={this.createNotification}
+                    />
+                  ) : (
+                    <LogIn
+                      {...this.state}
+                      logIn={this.logIn}
+                      screenWidth={this.state.screenWidth}
+                      isAuthed={true}
+                      isLoggedIn={this.state.isLoggedIn}
+                    />
+                  )
+                }
+              />
+              <Route
+                path="/pictureupload"
+                exact
+                render={() =>
+                  this.state.isLoggedIn ? (
+                    <PictureUpload
+                      currentSubPage={this.state.currentSubPage}
+                      screenWidth={this.state.screenWidth}
+                      contactRef={this.contactRef}
+                      isAuthed={true}
+                    />
+                  ) : (
+                    <LogIn
+                      {...this.state}
+                      logIn={this.logIn}
+                      screenWidth={this.state.screenWidth}
+                      isAuthed={true}
+                      isLoggedIn={this.state.isLoggedIn}
+                    />
+                  )
+                }
+              />
+              <Route path="/" render={() => <div>404 Page Not Found</div>} />
           </Switch>
           <Footer {...this.state} goTologIn={this.goTologIn} />
         </div>

@@ -220,7 +220,7 @@ body {
 .valuesParagraph {
   text-align: center;
 }
-/* ---------------------------------------------------------- contact */
+/* ---------------------------------------------------------- contact, events ------------------------------- */
 .allContactsContainer {
   text-align: center;
 }
@@ -252,6 +252,37 @@ body {
   height: 70%;
   width: 100%;
 }
+.eventCardContainer {
+  width: 80vw;
+  margin-left: 10vw;
+}
+.previewCard {
+  border: solid;
+  width: 80vw;
+  margin-left: 10vw;
+}
+.eventCard {
+  height: 400px;
+}
+.eventImg {
+  float: left;
+  margin-right: 30px;
+}
+
+.eventFormItem {
+  width: 40vw;
+}
+.eventFormDescription {
+  width: 80vw;
+  height: 200px;
+}
+/* ---------------------------------------------------------- BACKEND PAGES ------------------------------------------- */
+
+.slideshowTutorialContent {
+  width: 80vw;
+  margin-left: 10vw;
+}
+/* ---------------------------------------------------------- MOBILE/TABLET/ETC ------------------------------------------ */
 @media only screen and (max-width: 800px) {
   .navButton {
     font-size: 12px;
@@ -269,6 +300,7 @@ body {
   .navButton {
     font-size: 10px;
   }
+
   /* --------------------------------------login stuff------------------------------------------ */
 
   .pictureUpload {

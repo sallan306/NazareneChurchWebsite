@@ -3,8 +3,8 @@ class LogIn extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
-      password: "",
+      username: "1",
+      password: "1",
       correctUsername: "1",
       correctPassword: "1"
     };
@@ -33,22 +33,32 @@ class LogIn extends Component {
     return !this.props.isLoggedIn ? (
       <div className="Login">
         <div className="whiteSpace"></div>
+        <h1>Church Administrator Login</h1>
         <form
+          className="loginForm"
           onSubmit={event =>
             this.loginAttempt(this.state.username, this.state.password, event)
           }
         >
-          <input
-            onChange={e => this.onChange("username", e)}
-            value={this.state.username}
-            placeholder="username"
-          />
-          <input
-            onChange={e => this.onChange("password", e)}
-            value={this.state.password}
-            placeholder="password"
-          />
-          <button>Submit</button>
+          <div>
+            <input
+              className="loginUsername"
+              onChange={e => this.onChange("username", e)}
+              value={this.state.username}
+              placeholder="username"
+            />
+          </div>
+          <div>
+            <input
+              className="loginPassword"
+              onChange={e => this.onChange("password", e)}
+              value={this.state.password}
+              placeholder="password"
+            />
+          </div>
+          <div>
+            <button>Submit</button>
+          </div>
         </form>
       </div>
     ) : (

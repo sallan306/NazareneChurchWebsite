@@ -7,6 +7,7 @@ import NikkiHouston from "../../Resources/NikkiHouston.jpg";
 import BKEvents from "../../Resources/BKHoldingHands.jpg";
 import BKContact from "../../Resources/BKDearGodSepia.jpg";
 import ParallaxCustom from "../Components/ParallaxCustom";
+import axios from "axios";
 const contactList = [
   {
     role: "Lead Pastor",
@@ -33,7 +34,7 @@ const contactList = [
   {
     role: "Outreach Pastor",
     name: "Ruth Todd",
-    email: "worship@storypoint.info",
+    email: "ruthtodd28@gmail.com",
     imgURL: RuthTodd,
     index: 4
   },
@@ -46,10 +47,21 @@ const contactList = [
   }
 ];
 class Events extends Component {
+  constructor() {
+    super();
+    this.state = {
+      eventsList: []
+    };
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
+    axios.get("/api/getList").then(res => {
+      this.setState({ eventsList: res.data });
+    });
   }
-  createContactList = () => {};
+
+  renderList = () => {};
   render() {
     return (
       <div className="eventsPage">
@@ -63,16 +75,21 @@ class Events extends Component {
           />
           <div className="content contentFacebook">
             <h2>Social</h2>
-            <iframe
-              className="googleCalendar"
-              title="googleCalendar"
-              src="https://calendar.google.com/calendar/embed?src=sallan306%40gmail.com&ctz=America%2FLos_Angeles"
-              style={{ border: 0 }}
-              width={this.props.screenWidth > 600 ? 800 : 375}
-              height={this.props.screenWidth > 600 ? 600 : 450}
-              frameborder={0}
-              scrolling="yes"
-            />
+              {this.state.eventsList.map(event => {
+                return (
+                  <div className="eventCard" key={event.key}>
+                    <img
+                      alt={event.name}
+                      className="eventImg"
+                      src={event.imgURL}
+                    />
+                    <h1 className="eventName">{event.name}</h1>
+                    <h2 className="eventDate">{event.date}</h2>
+                    <h2 className="eventTime">{event.time}</h2>
+                    <p className="eventDescription">{event.description}</p>
+                  </div>
+                );
+              })}
             <div className="footerWhiteSpace" />
             <div className="footerWhiteSpace" />
           </div>
