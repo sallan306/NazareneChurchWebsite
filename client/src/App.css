@@ -176,7 +176,7 @@ body {
 }
 /* ----------------------------------------------------------parallax */
 .parallaxSizePrimary {
-  height: 83vh;
+  height: 88vh;
 }
 .parallaxSizeSecondary {
   height: 100vh;
@@ -195,9 +195,7 @@ body {
   text-align: center;
 }
 .parallaxTitle {
-  padding-left: 20px;
   letter-spacing: 20px;
-  /* padding: 20px; */
   width: fit-content;
   margin: auto;
   color: #fff;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
 import BKSunset from "../../Resources/BKCross.jpg";
 import { Parallax } from "react-parallax";
+import TitleSVG from "./TitleSVG.js";
 
 class ParallaxCustom extends Component {
   constructor() {
@@ -9,7 +9,7 @@ class ParallaxCustom extends Component {
     this.state = {
       parallaxStrength: 100,
       BKIMGURL: "",
-      bgStyle: {opacity: 0.8},
+      bgStyle: { opacity: 0.8 }
     };
   }
   render() {
@@ -28,15 +28,18 @@ class ParallaxCustom extends Component {
           }
           bgImage={this.props.BKIMGURL ? this.props.BKIMGURL : BKSunset}
           bgImageStyle={
-            this.props.bgStyle
-              ? this.props.bgStyle
-              : this.state.bgStyle
+            this.props.bgStyle ? this.props.bgStyle : this.state.bgStyle
           }
           bgImageAlt="the cat"
         >
           <div className="parallaxContent">
             <div className="parallaxTitleContainer">
-              <div className={"parallaxTitle parallaxTitle"+this.props.title}>{this.props.title}</div>
+              <div className={"parallaxTitle"}>
+                <TitleSVG
+                  screenWidth={this.props.screenWidth}
+                  title={this.props.title}
+                />
+              </div>
             </div>
             {this.props.primary ? (
               <div className="parallaxSizePrimary" />

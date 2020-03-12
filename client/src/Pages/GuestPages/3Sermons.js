@@ -19,6 +19,7 @@ class Sermons extends Component {
           BKIMGURL={BKSermons}
           primary={true}
           bgStyle={{ top: 0 }}
+          screenWidth={this.props.screenWidth}
         />
         <div className="content contentSermons">
           <h3 className="centeredh3">Sermon Podcast</h3>

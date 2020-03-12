@@ -72,6 +72,7 @@ class Events extends Component {
             BKIMGURL={BKEvents}
             primary={true}
             bgStyle={{ top: 0 }}
+            screenWidth={this.props.screenWidth}
           />
           <div className="content contentFacebook">
             <h2>Social</h2>
@@ -101,6 +102,7 @@ class Events extends Component {
             BKIMGURL={BKContact}
             primary={false}
             bgStyle={{ top: 0 }}
+            screenWidth={this.props.screenWidth}
           />
           <div className="content contentContact">
             <h2>Our Staff</h2>

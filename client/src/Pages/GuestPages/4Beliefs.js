@@ -22,6 +22,7 @@ class Beliefs extends Component {
             BKIMGURL={BKBeliefs}
             primary={true}
             bgStyle={{ top: 0 }}
+            screenWidth={this.props.screenWidth}
           />
           <div className="content contentBeliefs">
             <ul className="ourBeliefs">
@@ -134,6 +135,7 @@ class Beliefs extends Component {
             parallaxStrength={this.props.parallaxStrength}
             BKIMGURL={BKValues}
             primary={false}
+            screenWidth={this.props.screenWidth}
           />
           <div className="content contentValues">
             <h3 className="centeredh3">Worship</h3>

@@ -22,6 +22,7 @@ class Home extends Component {
             BKIMGURL={BKPrimary}
             primary={true}
             bgStyle={{ top: 0 }}
+            screenWidth={this.props.screenWidth}
           />
         ) : (
           <ParallaxCustom
@@ -30,6 +31,7 @@ class Home extends Component {
             BKIMGURL={BKPrimary}
             primary={true}
             bgStyle={{ top: 0 }}
+            screenWidth={this.props.screenWidth}
           />
         )}
         <div className="content contentHome">

@@ -23,6 +23,7 @@ class About extends Component {
               BKIMGURL={BKVision}
               primary={true}
               bgStyle={{ top: 0 }}
+              screenWidth={this.props.screenWidth}
             />
             <div className="content contentVision">
               <h3 className="centeredh3">Our Mission</h3>
@@ -84,6 +85,7 @@ class About extends Component {
             parallaxStrength={this.props.parallaxStrength}
             BKIMGURL={BKHistory}
             primary={false}
+            screenWidth={this.props.screenWidth}
           />
           <div className="content contentHistory">
             <h3 className="centeredh3">Portage First Church</h3>
