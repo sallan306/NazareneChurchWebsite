@@ -6,11 +6,15 @@ const PictureUpload = () => {
         <div className="whiteSpace" />
         <div>
           Photos are uploaded using a google slideshow. The slideshow we are
-          using is (insert link here) and is registered to (insert google email
-          here) and can only be modified with this login information. Once the
-          slideshow is opened up, you can add individual images by going to
-          Insert -> Image -> and chose your option. You can import from your
-          computer, google drive, or google photos.
+          using is{" "}
+          <a href="https://docs.google.com/presentation/d/16FNq5TpOYUar8GnweGhjuAqrlFhtHkBF-4EgPWGLmV4/edit?usp=sharing">
+            HERE
+          </a>{" "}
+          and is registered to (insert google email here) and can only be
+          modified with this login information. Once the slideshow is opened up,
+          you can add individual images by going to Insert -> Image -> and chose
+          your option. You can import from your computer, google drive, or
+          google photos.
         </div>
         <div>
           If you want to import an entire album of photos, make the album in the

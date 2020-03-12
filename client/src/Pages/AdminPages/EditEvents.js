@@ -76,7 +76,7 @@ class EditEvents extends Component {
       <div className="EditEvents">
         <NotificationContainer />
         <h1>Event Editor</h1>
-        <p>Events should automatically format by the soonest one first</p>
+        <p>Events should automatically format by the soonest one first. Events will be automatically deleted the day after the date posted</p>
         <form className="eventForm" onSubmit={e => this.addListItem(e)}>
           <input
             className="eventFormItem eventFormName"
