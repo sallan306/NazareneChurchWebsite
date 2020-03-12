@@ -31,7 +31,7 @@ class NavbarDesktop extends Component {
           <div className="navButtonsContainer">
             <div className="buttonContainer">
               <Link
-                to="/pictureupload"
+                to="/editslideshow"
                 className="buttonHome navButton"
                 onClick={() => {
                   this.props.closeNavAndChangePage();
@@ -49,6 +49,17 @@ class NavbarDesktop extends Component {
                 }}
               >
                 EDIT EVENTS
+              </Link>
+            </div>
+            <div className="buttonContainer">
+              <Link
+                to="/editsermons"
+                className="buttonHome navButton"
+                onClick={() => {
+                  this.props.closeNavAndChangePage();
+                }}
+              >
+                EDIT SERMONS
               </Link>
             </div>
             <div className="buttonContainer">

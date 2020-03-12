@@ -66,12 +66,11 @@ class About extends Component {
               />
               <h2>GALLERY</h2>
               <iframe
-                title="pictures"
-                className="googlePicturesSlideshow"
-                src="https://docs.google.com/presentation/d/e/2PACX-1vRhzbRaU9Ys2ZrD3NxjOmD0VBcpcRmu3PdJWkqfjLttZ7ibSY2_XDPHuF8TV-g9ohxj0V4DDFbo1GU0/embed?start=true&loop=true&delayms=3000"
+                title="googleSlideshow"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vQkA3UdImbtcxmoFapYRmGvocRK6uGWMtW0VofeeHv_AS1dcRiPISXmHPUWz1gSyTWBUPF5MitfgoaH/embed?start=true&loop=true&delayms=3000"
                 frameBorder="0"
-                width="700"
-                height="530"
+                width="960"
+                height="569"
                 allowFullScreen="true"
                 mozAllowFullScreen="true"
                 webkitAllowFullScreen="true"
