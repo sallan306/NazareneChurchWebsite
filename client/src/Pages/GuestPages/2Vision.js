@@ -53,17 +53,7 @@ class About extends Component {
                 We encourage new family members to watch the video below to
                 better understand our core values
               </h3>
-              <iframe
-                title="pictures"
-                className="googlePicturesSlideshow"
-                src="https://docs.google.com/presentation/d/e/2PACX-1vRhzbRaU9Ys2ZrD3NxjOmD0VBcpcRmu3PdJWkqfjLttZ7ibSY2_XDPHuF8TV-g9ohxj0V4DDFbo1GU0/embed?start=true&loop=true&delayms=3000"
-                frameBorder="0"
-                width="960"
-                height="569"
-                allowFullScreen="true"
-                mozAllowFullScreen="true"
-                webkitAllowFullScreen="true"
-              ></iframe>
+
               <iframe
                 className="youtubeWindow"
                 title="slideshow"
@@ -73,7 +63,19 @@ class About extends Component {
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
+              <h2>GALLERY</h2>
+              <iframe
+                title="pictures"
+                className="googlePicturesSlideshow"
+                src="https://docs.google.com/presentation/d/e/2PACX-1vRhzbRaU9Ys2ZrD3NxjOmD0VBcpcRmu3PdJWkqfjLttZ7ibSY2_XDPHuF8TV-g9ohxj0V4DDFbo1GU0/embed?start=true&loop=true&delayms=3000"
+                frameBorder="0"
+                width="700"
+                height="530"
+                allowFullScreen="true"
+                mozAllowFullScreen="true"
+                webkitAllowFullScreen="true"
+              />
             </div>
           </div>
         </div>

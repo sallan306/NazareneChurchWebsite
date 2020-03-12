@@ -10,7 +10,7 @@ var list = [
   {
     key: 1,
     name: "birthday",
-    date: "wednesday, march 5",
+    date: "2020-03-06",
     time: "5PM",
     imgURL: "https://via.placeholder.com/500x300",
     description:
@@ -19,7 +19,7 @@ var list = [
   {
     key: 2,
     name: "birthday",
-    date: "wednesday, march 5",
+    date: "2020-03-09",
     time: "5PM",
     imgURL: "https://via.placeholder.com/500x300",
     description:
@@ -28,7 +28,7 @@ var list = [
   {
     key: 3,
     name: "birthday",
-    date: "wednesday, march 5",
+    date: "2020-03-10",
     time: "5PM",
     imgURL: "https://via.placeholder.com/500x300",
     description:

@@ -10,10 +10,10 @@ class EditEvents extends Component {
   constructor() {
     super();
     this.state = {
-      eventName: "newName",
-      eventDate: "newDate",
-      eventTime: "newTime",
-      eventDescription: "newDescrip",
+      eventName: "",
+      eventDate: "2020-03-06",
+      eventTime: "",
+      eventDescription: "",
       eventImgURL: "https://via.placeholder.com/500x300",
       eventsList: []
     };
@@ -76,6 +76,7 @@ class EditEvents extends Component {
       <div className="EditEvents">
         <NotificationContainer />
         <h1>Event Editor</h1>
+        <p>Events should automatically format by the soonest one first</p>
         <form className="eventForm" onSubmit={e => this.addListItem(e)}>
           <input
             className="eventFormItem eventFormName"
@@ -84,6 +85,7 @@ class EditEvents extends Component {
             placeholder="Event Name"
           ></input>
           <input
+            type="date"
             className="eventFormItem eventFormDate"
             onChange={e => this.onChange(e, "eventDate")}
             value={this.state.eventDate}
@@ -95,11 +97,12 @@ class EditEvents extends Component {
             value={this.state.eventTime}
             placeholder="Event Time"
           ></input>
+
           <input
             className="eventFormItem eventFormImgURL"
             onChange={e => this.onChange(e, "eventImgURL")}
             value={this.state.eventImgURL}
-            placeholder="Event Image"
+            placeholder="Image URL (ex https://via.placeholder.com/500x300) Recommended size is 500x300"
           ></input>
           <textarea
             className="eventFormItem eventFormDescription"
