@@ -55,7 +55,7 @@ class NavbarDesktop extends Component {
                 className="buttonAbout navButton"
                 onClick={() => this.props.closeNavAndChangePage("vision")}
               >
-                VISION
+                ABOUT US
               </Link>
               <Link
                 to="/vision"

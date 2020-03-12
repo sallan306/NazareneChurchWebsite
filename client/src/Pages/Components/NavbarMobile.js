@@ -55,7 +55,7 @@ class NavbarMobile extends Component {
               className="buttonContainer buttonGray navButton"
               onClick={() => this.props.closeNavAndChangePage("vision")}
             >
-              VISION
+              ABOUT
             </Link>
             <Link
               to="/vision"
@@ -68,7 +68,7 @@ class NavbarMobile extends Component {
                 )
               }
             >
-              ► HISTORY
+              HISTORY
             </Link>
             <Link
               to="/sermons"
@@ -95,7 +95,7 @@ class NavbarMobile extends Component {
                 )
               }
             >
-              ► VALUES
+              VALUES
             </Link>
             <Link
               to="/events"
@@ -115,7 +115,7 @@ class NavbarMobile extends Component {
                 )
               }
             >
-              ► CONTACT
+              CONTACT
             </Link>
           </div>
         </div>
