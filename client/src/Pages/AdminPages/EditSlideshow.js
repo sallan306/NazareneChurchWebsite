@@ -11,6 +11,7 @@ const EditSlideshow = () => {
             HERE
           </a>{" "}
         </div>
+        <p>make sure you log out of your own personal google account first</p>
         <p>username: storypointNazarene@gmail.com</p>
         <p>password: 2Samuel1234</p>
         <div>

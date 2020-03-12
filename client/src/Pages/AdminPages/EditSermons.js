@@ -11,6 +11,7 @@ const EditSermons = () => {
         <p>When titling the podcast, please follow the naming conventions I have already started so that every audio file is in the proper order</p>
         <p>Format: YYYY/MM/DD NAME OF THE SERMON</p>
         <p>This naming convention is so that the sermons will automatically play from the newest one first</p>
+        <p>Once you upload the sermon, make sure you add it to the playlist "Storypoint Sermons" so it shows up on the website</p>
       </div>
     </Fragment>
   );
