@@ -69,8 +69,8 @@ class About extends Component {
                 title="googleSlideshow"
                 src="https://docs.google.com/presentation/d/e/2PACX-1vQkA3UdImbtcxmoFapYRmGvocRK6uGWMtW0VofeeHv_AS1dcRiPISXmHPUWz1gSyTWBUPF5MitfgoaH/embed?start=true&loop=true&delayms=3000"
                 frameBorder="0"
-                width="960"
-                height="569"
+                width={this.props.screenWidth > 600 ? "960" : "400"}
+                height={this.props.screenWidth > 600 ? "569" : "300"}
                 allowFullScreen="true"
                 mozAllowFullScreen="true"
                 webkitAllowFullScreen="true"

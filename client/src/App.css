@@ -496,9 +496,6 @@ body {
 
   /* --------------------------------------events------------------------------------------ */
 
-  .facebookWindow {
-    width: 100%;
-  }
   .contactImg {
     max-width: 90%;
     height: auto;
@@ -507,5 +504,13 @@ body {
   }
   .contactContainer {
     height: 520px;
+  }
+
+  .eventCard {
+    width: 95vw;
+    height: 550px;
+  }
+  .eventImg {
+    width: 100%;
   }
 }
