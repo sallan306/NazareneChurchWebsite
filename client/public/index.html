@@ -6,12 +6,32 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDUiXjZlwcySDlFcImuGRY1ny-o4gi7-iA",
+        authDomain: "churchwebsite-9fcad.firebaseapp.com",
+        databaseURL: "https://churchwebsite-9fcad.firebaseio.com",
+        projectId: "churchwebsite-9fcad",
+        storageBucket: "churchwebsite-9fcad.appspot.com",
+        messagingSenderId: "438123093575",
+        appId: "1:438123093575:web:533370db6946aeb4c81b62",
+        measurementId: "G-P01WJ1Y3CV"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <meta name="theme-color" content="#000000" />
 
-    <meta
-      name="description"
-      content="Storypoint: A Church of the Nazarene"
-    />
+    <meta name="description" content="Storypoint: A Church of the Nazarene" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Nazarene Church</title>
   </head>

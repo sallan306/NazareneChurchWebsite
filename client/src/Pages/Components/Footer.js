@@ -46,6 +46,7 @@ class Footer extends Component {
               />
               <input type="hidden" name="currency_code" value="USD" />
               <input
+                className="paypalPicture"
                 type="image"
                 src="http://themtmoriahchurch.org/wp-content/uploads/2016/04/4418900_orig-300x150.png"
                 border="0"
@@ -85,9 +86,7 @@ class Footer extends Component {
                 network="email"
                 url="sallan306@gmail.com"
               />
-              <Link to="/login" >
-              Login
-              </Link >
+              <Link to="/login">Login</Link>
             </div>
           </div>
         </div>

@@ -7,7 +7,8 @@ import NikkiHouston from "../../Resources/NikkiHouston.jpg";
 import BKEvents from "../../Resources/BKHoldingHands.jpg";
 import BKContact from "../../Resources/BKDearGodSepia.jpg";
 import ParallaxCustom from "../Components/ParallaxCustom";
-import axios from "axios";
+import { base } from "../Components/Rebase";
+
 const contactList = [
   {
     role: "Lead Pastor",
@@ -50,17 +51,23 @@ class Events extends Component {
   constructor() {
     super();
     this.state = {
-      eventsList: []
+      eventsList: [],
+      speed: 10
     };
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    axios.get("/api/getList").then(res => {
-      this.setState({ eventsList: res.data });
+    console.log("hi")
+    this.eventsRef = base.syncState("events", {
+      context: this,
+      state: "eventsList",
+      asArray: true
     });
   }
-
+  // componentWillUnmount() {
+  //   base.removeBinding(this.eventsRef);
+  // }
   renderList = () => {};
   render() {
     return (
@@ -75,24 +82,25 @@ class Events extends Component {
             screenWidth={this.props.screenWidth}
           />
           <div className="content contentFacebook">
-            <h2>Social</h2>
-              {this.state.eventsList.map(event => {
-                return (
-                  <div className="eventCard" key={event.key}>
-                    <img
-                      alt={event.name}
-                      className="eventImg"
-                      src={event.imgURL}
-                    />
-                    <h1 className="eventName">{event.name}</h1>
-                    <h2 className="eventDate">{event.date}</h2>
-                    <h2 className="eventTime">{event.time}</h2>
-                    <p className="eventDescription">{event.description}</p>
-                  </div>
-                );
-              })}
-            <div className="footerWhiteSpace" />
-            <div className="footerWhiteSpace" />
+            <h2>Events</h2>
+            {
+            this.state.eventsList.map(event => {
+              return (
+                <div className="eventCard" key={event.key}>
+                  <img
+                    alt={event.name}
+                    className="eventImg"
+                    src={event.imgURL}
+                  />
+                  <h1 className="eventName">{event.name}</h1>
+                  <h2 className="eventDate">{event.date}</h2>
+                  <h2 className="eventTime">{event.time}</h2>
+                  <p className="eventDescription">{event.description}</p>
+                </div>
+              );
+            })
+            }
+
           </div>
         </div>
         <div className="Contact" ref={this.props.contactRef}>

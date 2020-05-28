@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "react-notifications/lib/notifications.css";
 import {
   NotificationContainer,
   NotificationManager
 } from "react-notifications";
+import { base } from "../Components/Rebase";
 
 class EditEvents extends Component {
   constructor() {
@@ -15,8 +15,18 @@ class EditEvents extends Component {
       eventTime: "",
       eventDescription: "",
       eventImgURL: "https://via.placeholder.com/500x300",
+      showEventsList: false,
       eventsList: []
     };
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    this.eventsRef = base.syncState("events", {
+      context: this,
+      state: "eventsList",
+      asArray: true
+    });
   }
   editSuccessNotification = () => {
     NotificationManager.success("Success", "Event added!");
@@ -24,53 +34,51 @@ class EditEvents extends Component {
   deleteSuccessNotification = () => {
     NotificationManager.success("Success", "Event Deleted!");
   };
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    axios.get("/api/getList").then(res => {
-      this.setState({ eventsList: res.data });
-    });
-  }
-  addListItem = e => {
-    e.preventDefault();
-    let newListItem = {
-      key: this.state.eventsList.length + 1,
-      name: this.state.eventName,
-      date: this.state.eventDate,
-      time: this.state.eventTime,
-      imgURL: this.state.eventImgURL,
-      description: this.state.eventDescription
-    };
-    axios.post("/api/addListItem", newListItem).then(
-      axios.get("/api/getList").then(res => {
-        this.setState({ eventsList: res.data });
-      })
-    );
-
-    this.setState({
-      eventName: "",
-      eventDate: "",
-      eventTime: "",
-      eventDescription: "",
-      eventImgURL: ""
-    });
-
-    this.editSuccessNotification();
-  };
-
   onChange = (e, itemToChange) => {
     this.setState({
       [itemToChange]: e.target.value
     });
   };
-  DeleteItem = index => {
-    console.log(index);
-    axios.post("/api/deleteListItem", index).then(
-      axios.get("/api/getList").then(res => {
-        this.setState({ eventsList: res.data });
-      })
-    );
+
+  addEvent = e => {
+    e.preventDefault();
+    var uniqueID = Date.now();
+    let tempEvent = {
+      key: uniqueID,
+      name: this.state.name,
+      date: this.state.date,
+      time: this.state.time,
+      description: this.state.description,
+      imgURL: this.state.imgURL
+    };
+    console.log(toString(tempEvent));
+    base.post("events/" + uniqueID, {
+      data: {
+        key: uniqueID,
+        name: this.state.eventName,
+        date: this.state.eventDate,
+        time: this.state.eventTime,
+        description: this.state.eventDescription,
+        imgURL: this.state.eventImgURL
+      }
+    });
+
+    this.setState({
+      eventName: "",
+      eventDate: "2020-03-06",
+      eventTime: "",
+      eventDescription: "",
+      eventImgURL: "https://via.placeholder.com/500x300"
+    });
+
+    this.editSuccessNotification();
+  };
+
+  deleteEvent = id => {
+    base.remove("/events/" + id);
     this.deleteSuccessNotification();
   };
+
   render() {
     return (
       <div className="EditEvents">
@@ -115,6 +123,7 @@ class EditEvents extends Component {
           ></textarea>
           <div>
             <button
+              onClick={e => this.addEvent(e)}
               disabled={
                 !this.state.eventName &&
                 !this.state.eventDate &&
@@ -141,15 +150,15 @@ class EditEvents extends Component {
           </div>
         </div>
         <div className="eventCardContainer">
-          {this.state.eventsList.map((event, index) => {
+          {this.state.eventsList.map(event => {
             return (
-              <div className="eventCard" key={event.key}>
-                <img alt={event.name} className="eventImg" src={event.imgURL} />
+              <div className="eventCard">
+                <img alt={event.name} className="eventImg" src={(event.imgURL === "https://via.placeholder.com/500x300" || "" ) ? "https://via.placeholder.com/500x400": event.imgURL} />
                 <h1 className="eventName">{event.name}</h1>
                 <h2 className="eventDate">{event.date}</h2>
                 <h2 className="eventTime">{event.time}</h2>
                 <p className="eventDescription">{event.description}</p>
-                <button onClick={() => this.DeleteItem({ index: index })}>
+                <button onClick={() => this.deleteEvent(event.key)}>
                   Delete this event
                 </button>
               </div>

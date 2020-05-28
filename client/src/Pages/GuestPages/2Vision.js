@@ -58,20 +58,20 @@ class About extends Component {
               <iframe
                 className="youtubeWindow"
                 title="slideshow"
-                width="700"
-                height="530"
+                width="500"
+                height="330"
                 src="https://www.youtube.com/embed/8FmgY8ZE3Ng"
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                allowFullScreen="true"
               />
               <h2>GALLERY</h2>
               <iframe
                 title="googleSlideshow"
                 src="https://docs.google.com/presentation/d/e/2PACX-1vQkA3UdImbtcxmoFapYRmGvocRK6uGWMtW0VofeeHv_AS1dcRiPISXmHPUWz1gSyTWBUPF5MitfgoaH/embed?start=true&loop=true&delayms=3000"
                 frameBorder="0"
-                width={this.props.screenWidth > 600 ? "960" : "400"}
-                height={this.props.screenWidth > 600 ? "569" : "300"}
+                width={this.props.screenWidth > 600 ? "800" : "400"}
+                height={this.props.screenWidth > 600 ? "400" : "300"}
                 allowFullScreen="true"
                 mozAllowFullScreen="true"
                 webkitAllowFullScreen="true"

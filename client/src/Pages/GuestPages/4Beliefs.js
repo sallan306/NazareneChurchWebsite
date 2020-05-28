@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BKBeliefs from "../../Resources/BKSunset.jpg";
+import BKBeliefs from "../../Resources/BKHoldingBible.jpg";
 import BKValues from "../../Resources/BKGrainField.jpg";
 import ParallaxCustom from "../Components/ParallaxCustom";
 

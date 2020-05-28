@@ -11,8 +11,8 @@ import LogIn from "./Pages/AdminPages/Login";
 import EditEvents from "./Pages/AdminPages/EditEvents";
 import EditSlideshow from "./Pages/AdminPages/EditSlideshow";
 import EditSermons from "./Pages/AdminPages/EditSermons";
-
 import { Helmet } from "react-helmet";
+
 import "./App.css";
 
 class App extends Component {
