@@ -259,16 +259,14 @@ body {
   margin-left: 10vw;
 }
 .previewCard {
-  border: solid;
+  /* border: solid; */
   width: 80vw;
   margin-left: 10vw;
 }
 .eventCard {
-  height: 400px;
+  width: 80vw;
 }
 .eventImg {
-  float: left;
-  margin-right: 30px;
   width: 500px;
   height: 300px;
 }
@@ -513,8 +511,17 @@ body {
     height: 520px;
   }
 
+  .previewCard {
+    margin-left: 0;
+    width: 100%;
+  }
+  .eventCardContainer {
+    margin-left: 0;
+    width: 100vw;
+  }
   .eventCard {
-    width: 95vw;
+    width: 100%;
+    margin-left: 0;
     height: 550px;
   }
   .eventImg {

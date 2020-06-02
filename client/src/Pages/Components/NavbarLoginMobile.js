@@ -80,84 +80,54 @@ class NavbarMobile extends Component {
           <div
             className="navButtonsContainer"
             style={{
-              height: this.state.mobileExpanded ? 400 : 0,
+              height: this.state.mobileExpanded ? 200 : 0,
               backgroundColor: this.state.mobileExpanded ? "lightgray" : "white"
             }}
           >
-            <Link
-              to="/"
-              className="buttonContainer navButton"
-              onClick={() => this.closeNavAndChangePage("home")}
-            >
-              HOME
-            </Link>
-            <Link
-              to="/vision"
-              className="buttonContainer buttonGray navButton"
-              onClick={() => this.closeNavAndChangePage("vision")}
-            >
-              ABOUT
-            </Link>
-            <Link
-              to="/vision"
-              className="buttonContainer navButton"
-              onClick={() =>
-                this.closeNavAndChangePage(
-                  "vision",
-                  "history",
-                  this.props.historyRef
-                )
-              }
-            >
-              HISTORY
-            </Link>
-            <Link
-              to="/sermons"
-              className="buttonContainer buttonGray navButton"
-              onClick={() => this.closeNavAndChangePage("sermons")}
-            >
-              SERMON
-            </Link>
-            <Link
-              to="/beliefs"
-              className="buttonContainer navButton"
-              onClick={() => this.closeNavAndChangePage("beliefs")}
-            >
-              BELIEFS
-            </Link>
-            <Link
-              to="/beliefs"
-              className="buttonContainer buttonGray navButton"
-              onClick={() =>
-                this.closeNavAndChangePage(
-                  "beliefs",
-                  "values",
-                  this.props.valuesRef
-                )
-              }
-            >
-              VALUES
-            </Link>
-            <Link
-              to="/events"
-              className="buttonContainer navButton"
-              onClick={() => this.closeNavAndChangePage("events")}
-            >
-              EVENTS
-            </Link>
-            <Link
-              to="/events"
-              className="buttonContainer buttonGray navButton"
-              onClick={() =>
-                this.closeNavAndChangePage(
-                  "events",
-                  "contact",
-                  this.props.contactRef
-                )
-              }
-            >
-              CONTACT
-            </Link>
+            <div className="buttonContainer">
+              <Link
+                to="/editslideshow"
+                className="buttonHome navButton"
+                onClick={() => {
+                  this.closeNavAndChangePage();
+                }}
+              >
+                EDIT SLIDESHOW
+              </Link>
+            </div>
+            <div className="buttonContainer">
+              <Link
+                to="/editevents"
+                className="buttonHome navButton"
+                onClick={() => {
+                  this.closeNavAndChangePage();
+                }}
+              >
+                EDIT EVENTS
+              </Link>
+            </div>
+            <div className="buttonContainer">
+              <Link
+                to="/editsermons"
+                className="buttonHome navButton"
+                onClick={() => {
+                  this.closeNavAndChangePage();
+                }}
+              >
+                EDIT SERMONS
+              </Link>
+            </div>
+            <div className="buttonContainer">
+              <Link
+                to="/"
+                className="buttonHome navButton"
+                onClick={() => {
+                  this.props.logOut();
+                }}
+              >
+                LOG OUT
+              </Link>
+            </div>
           </div>
         </div>
       </div>

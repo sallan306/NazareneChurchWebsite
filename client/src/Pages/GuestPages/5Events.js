@@ -58,16 +58,24 @@ class Events extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    console.log("hi")
+    console.log("hi");
     this.eventsRef = base.syncState("events", {
       context: this,
       state: "eventsList",
       asArray: true
     });
   }
-  // componentWillUnmount() {
-  //   base.removeBinding(this.eventsRef);
-  // }
+
+  getTime = time => {
+    var hours = time.slice(0, 2);
+    var minutes = time.slice(3, 5);
+
+    if (parseInt(hours) > 12) {
+      return parseInt(hours) - 12 + ":" + minutes + " PM";
+    } else {
+      return parseInt(hours) + ":" + minutes + " AM";
+    }
+  };
   renderList = () => {};
   render() {
     return (
@@ -83,24 +91,24 @@ class Events extends Component {
           />
           <div className="content contentFacebook">
             <h2>Events</h2>
-            {
-            this.state.eventsList.map(event => {
+            {this.state.eventsList.length > 0 ? "" : <h2>We have no upcoming events at the moment. Check back soon!</h2>}
+            {this.state.eventsList.map(event => {
               return (
                 <div className="eventCard" key={event.key}>
+                  <h1 className="eventName">{event.name}</h1>
                   <img
                     alt={event.name}
                     className="eventImg"
                     src={event.imgURL}
                   />
-                  <h1 className="eventName">{event.name}</h1>
-                  <h2 className="eventDate">{event.date}</h2>
-                  <h2 className="eventTime">{event.time}</h2>
+
+                  <h2 className="eventDate">
+                    {event.date + " at " + this.getTime(event.time)}
+                  </h2>
                   <p className="eventDescription">{event.description}</p>
                 </div>
               );
-            })
-            }
-
+            })}
           </div>
         </div>
         <div className="Contact" ref={this.props.contactRef}>
@@ -127,6 +135,7 @@ class Events extends Component {
               can find out about our pastoral staff.
             </p>
             <div className="allContactsContainer">
+
               {contactList.map(contact => {
                 return (
                   <div className="contactContainer" key={contact.index}>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import NavbarLogin from "./NavbarLogin";
+import NavbarLoginMobile from "./NavbarLoginMobile"
 
 class Navbar extends Component {
   constructor() {
@@ -78,9 +79,28 @@ class Navbar extends Component {
     this.props.changePage(page, subpage, ref);
   };
 
-  render() {
-    return this.props.screenWidth > 600 ? (
-      !this.props.isLoggedIn ? (
+  isLoggedIn = () => {
+    if (!this.props.isLoggedIn && this.props.screenWidth < 600) {
+      //not logged in and mobile
+      return (
+        <NavbarMobile
+          changePage={this.props.changePage}
+          screenWidth={this.props.screenWidth}
+          changeSubPage={this.changeSubPage}
+          visionRef={this.props.visionRef}
+          historyRef={this.props.historyRef}
+          valuesRef={this.props.valuesRef}
+          contactRef={this.props.contactRef}
+          currentPage={this.props.currentPage}
+          currentSubPage={this.props.currentSubPage}
+          handleScroll={this.handleScroll}
+          closeNavAndChangePage={this.closeNavAndChangePage}
+          {...this.state}
+        />
+      );
+    } else if (!this.props.isLoggedIn && this.props.screenWidth > 600) {
+      //not logged in and desktop
+      return (
         <NavbarDesktop
           changePage={this.changePage}
           screenWidth={this.props.screenWidth}
@@ -99,15 +119,30 @@ class Navbar extends Component {
           handleChangeState={this.handleChangeState}
           {...this.state}
         />
-      ) : (
+      );
+    } else if (this.props.isLoggedIn && this.props.screenWidth < 600) {
+      //logged in and mobile
+      return (
+        <NavbarLoginMobile
+          changePage={this.props.changePage}
+          screenWidth={this.props.screenWidth}
+          changeSubPage={this.changeSubPage}
+          currentPage={this.props.currentPage}
+          currentSubPage={this.props.currentSubPage}
+          handleScroll={this.handleScroll}
+          closeNavAndChangePage={this.closeNavAndChangePage}
+          handleChangeState={this.handleChangeState}
+          logOut={this.props.logOut}
+          {...this.state}
+        />
+      );
+    } else if (this.props.isLoggedIn && this.props.screenWidth > 600) {
+      //logged in and desktop
+      return (
         <NavbarLogin
           changePage={this.changePage}
           screenWidth={this.props.screenWidth}
           changeSubPage={this.changeSubPage}
-          visionRef={this.props.visionRef}
-          historyRef={this.props.historyRef}
-          valuesRef={this.props.valuesRef}
-          contactRef={this.props.contactRef}
           currentPage={this.props.currentPage}
           currentSubPage={this.props.currentSubPage}
           handleScroll={this.handleScroll}
@@ -119,26 +154,12 @@ class Navbar extends Component {
           logOut={this.props.logOut}
           {...this.state}
         />
-      )
-    ) : (
-      <NavbarMobile
-        changePage={this.changePage}
-        screenWidth={this.props.screenWidth}
-        changeSubPage={this.changeSubPage}
-        visionRef={this.props.visionRef}
-        historyRef={this.props.historyRef}
-        valuesRef={this.props.valuesRef}
-        contactRef={this.props.contactRef}
-        currentPage={this.props.currentPage}
-        currentSubPage={this.props.currentSubPage}
-        handleScroll={this.handleScroll}
-        toggleNavMenu={this.toggleNavMenu}
-        openNav={this.openNav}
-        closeNav={this.closeNav}
-        closeNavAndChangePage={this.closeNavAndChangePage}
-        {...this.state}
-      />
-    );
+      );
+    }
+  };
+
+  render() {
+    return this.isLoggedIn();
   }
 }
 export default Navbar;

@@ -12,7 +12,7 @@ class NavbarDesktop extends Component {
           }
         >
           <div className="navLogoAndTitle">
-            <Link to="/home">
+            <Link to="/">
               <img
                 alt="logo"
                 className="navLogo"

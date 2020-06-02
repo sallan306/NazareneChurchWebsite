@@ -1,37 +1,38 @@
 import React, { Component } from "react";
+import {
+  NotificationContainer,
+  NotificationManager
+} from "react-notifications";
 class LogIn extends Component {
   constructor() {
     super();
     this.state = {
-      username: "1",
       password: "1",
-      correctUsername: "1",
-      correctPassword: "1"
+      correctPassword: process.env.REACT_APP_LOGIN_PASSWORD
     };
   }
   componentDidMount() {
     window.scrollTo(0, 0);
   }
-
+  loginFailed = () => {
+    NotificationManager.error("Incorrect Password", "Try again!", 1000);
+  };
   onChange = (toChange, input) => {
     this.setState({ [toChange]: input.target.value });
   };
   loginAttempt = (user, pass, event) => {
     event.preventDefault();
-    if (
-      toString(user) === toString(this.props.correctUsername) &&
-      toString(pass) === toString(this.props.correctPassword)
-    ) {
+    if (this.state.password === "1") {
       console.log("match!");
       this.props.logIn();
     } else {
-      console.log(user, pass);
-      console.log("incorrect");
+      this.loginFailed()
     }
   };
   render() {
     return !this.props.isLoggedIn ? (
       <div className="Login">
+        <NotificationContainer />
         <div className="whiteSpace"></div>
         <h1>Church Administrator Login</h1>
         <form
@@ -42,14 +43,7 @@ class LogIn extends Component {
         >
           <div>
             <input
-              className="loginUsername"
-              onChange={e => this.onChange("username", e)}
-              value={this.state.username}
-              placeholder="username"
-            />
-          </div>
-          <div>
-            <input
+            type="password"
               className="loginPassword"
               onChange={e => this.onChange("password", e)}
               value={this.state.password}
