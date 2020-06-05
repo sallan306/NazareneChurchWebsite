@@ -1,5 +1,6 @@
 {
   "name": "church-website",
+  "homepage": "http://storypoint.info",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,10 +14,7 @@
     "prerender-node": "^3.2.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-parallax": "^2.2.4",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "react-social-icons": "^4.1.0"
+    "react-scripts": "^3.4.1"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
@@ -40,6 +38,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sallan306/NazareneChurchWebsite/issues"
-  },
-  "homepage": "http://storypoint.info"
+  }
 }

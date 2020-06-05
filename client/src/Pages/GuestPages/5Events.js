@@ -99,7 +99,11 @@ class Events extends Component {
                   <img
                     alt={event.name}
                     className="eventImg"
-                    src={event.imgURL}
+                    src={
+                      event.imgURL === "" || null || undefined
+                        ? "https://www.clearbox.co.uk/wp-content/uploads/2014/01/Sunrise-500x300.jpg"
+                        : event.imgURL
+                    }
                   />
 
                   <h2 className="eventDate">
