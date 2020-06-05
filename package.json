@@ -10,15 +10,12 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.6",
-    "firebase": "^7.14.5",
-    "gh-pages": "^2.1.1",
     "prerender-node": "^3.2.5",
-    "re-base": "^4.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-parallax": "^2.2.4",
     "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
     "react-social-icons": "^4.1.0"
   },
   "devDependencies": {
@@ -30,7 +27,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "build": "ng build",
+    "build": "react-scripts build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
@@ -44,5 +41,5 @@
   "bugs": {
     "url": "https://github.com/sallan306/NazareneChurchWebsite/issues"
   },
-  "homepage": "https://github.com/sallan306/NazareneChurchWebsite#readme"
+  "homepage": "http://storypoint.info"
 }

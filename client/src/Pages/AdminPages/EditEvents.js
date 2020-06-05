@@ -188,7 +188,7 @@ class EditEvents extends Component {
             className="eventFormItem eventFormImgURL"
             onChange={e => this.onChange(e, "eventImgURL")}
             value={this.state.eventImgURL}
-            placeholder="Image URL (ex https://via.placeholder.com/500x300) Recommended size is 500x300"
+            placeholder="Image URL"
           ></input>
           <textarea
             className="eventFormItem eventFormDescription"
@@ -218,7 +218,11 @@ class EditEvents extends Component {
             <img
               alt={this.state.eventName}
               className="eventImg"
-              src={this.state.eventImgURL.length > 0 ? this.state.eventImgURL : "https://www.clearbox.co.uk/wp-content/uploads/2014/01/Sunrise-500x300.jpg"}
+              src={
+                this.state.eventImgURL.length > 0
+                  ? this.state.eventImgURL
+                  : "https://www.clearbox.co.uk/wp-content/uploads/2014/01/Sunrise-500x300.jpg"
+              }
             />
 
             <h2 className="eventDate">
@@ -248,9 +252,8 @@ class EditEvents extends Component {
                     alt={event.name}
                     className="eventImg"
                     src={
-                      event.imgURL === "https://via.placeholder.com/500x300" ||
-                      ""
-                        ? "https://via.placeholder.com/500x400"
+                      event.imgURL === "" || null || undefined
+                        ? "https://www.clearbox.co.uk/wp-content/uploads/2014/01/Sunrise-500x300.jpg"
                         : event.imgURL
                     }
                   />
