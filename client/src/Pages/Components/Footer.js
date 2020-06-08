@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FooterDonation from "../../Resources/FooterDonation.png"
 import { SocialIcon } from "react-social-icons";
 import { Link } from "react-router-dom";
 class Footer extends Component {
@@ -48,7 +49,7 @@ class Footer extends Component {
               <input
                 className="paypalPicture"
                 type="image"
-                src="http://themtmoriahchurch.org/wp-content/uploads/2016/04/4418900_orig-300x150.png"
+                src={FooterDonation}
                 border="0"
                 name="submit"
                 title="PayPal - The safer, easier way to pay online!"

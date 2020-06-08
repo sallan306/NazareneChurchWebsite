@@ -5,6 +5,7 @@ import {
   NotificationManager
 } from "react-notifications";
 import { base } from "../Components/Rebase";
+import axios from "axios"
 
 class EditEvents extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class EditEvents extends Component {
       eventDescription: "",
       eventImgURL: "",
       showEventsList: false,
+      imageToUpload: null,
       eventsList: []
     };
   }
@@ -51,7 +53,14 @@ class EditEvents extends Component {
 
     return today;
   };
-
+  fileSelectHandler = event => {
+    this.setState({
+      imageToUpload: event.target.files[0]
+    });
+  };
+  fileUploadHandler = () => {
+    // axios.post;
+  };
   deleteOldEvents = () => {
     let allEvents = [];
     base.fetch("events", {
@@ -115,6 +124,12 @@ class EditEvents extends Component {
       <div className="EditEvents">
         <NotificationContainer />
         <h1>Event Editor</h1>
+        <input
+          type="file"
+          className="eventFormItem eventFormFile"
+          onChange={this.fileSelectHandler}
+        ></input>
+        <button onClick={this.fileUploadHandler}>Upload File</button>
         <p>
           Events will automatically sort by the soonest one first. <br />
           For the image URL you need to:
