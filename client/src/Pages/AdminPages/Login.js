@@ -7,27 +7,29 @@ class LogIn extends Component {
   constructor() {
     super();
     this.state = {
-      password: "1",
+      password: "",
       correctPassword: process.env.REACT_APP_LOGIN_PASSWORD
     };
   }
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
-  loginFailed = () => {
-    NotificationManager.error("Incorrect Password", "Try again!", 1000);
-  };
+
   onChange = (toChange, input) => {
     this.setState({ [toChange]: input.target.value });
   };
-  loginAttempt = (user, pass, event) => {
+  loginAttempt = event => {
     event.preventDefault();
-    if (this.state.password === "1") {
+    if (this.state.password === this.state.correctPassword) {
       console.log("match!");
       this.props.logIn();
     } else {
-      this.loginFailed()
+      this.loginFailed();
     }
+  };
+  loginFailed = () => {
+    NotificationManager.error("Incorrect Password", "Try again!", 1000);
   };
   render() {
     return !this.props.isLoggedIn ? (
@@ -35,15 +37,10 @@ class LogIn extends Component {
         <NotificationContainer />
         <div className="whiteSpace"></div>
         <h1>Church Administrator Login</h1>
-        <form
-          className="loginForm"
-          onSubmit={event =>
-            this.loginAttempt(this.state.username, this.state.password, event)
-          }
-        >
+        <form className="loginForm" onSubmit={e => this.loginAttempt(e)}>
           <div>
             <input
-            type="password"
+              type="password"
               className="loginPassword"
               onChange={e => this.onChange("password", e)}
               value={this.state.password}

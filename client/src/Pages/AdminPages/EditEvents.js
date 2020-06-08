@@ -5,7 +5,7 @@ import {
   NotificationManager
 } from "react-notifications";
 import { base } from "../Components/Rebase";
-import axios from "axios"
+// import axios from "axios";
 
 class EditEvents extends Component {
   constructor() {
@@ -48,7 +48,8 @@ class EditEvents extends Component {
     var dd = String(today.getDate()).padStart(2, "0");
     var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
     var yyyy = today.getFullYear();
-
+ 
+    
     today = yyyy + "/" + mm + "/" + dd;
 
     return today;
@@ -117,7 +118,7 @@ class EditEvents extends Component {
     }
   };
   openInNewTab = url => {
-    var win = window.open(url, "_blank");
+    window.open(url, "_blank");
   };
   render() {
     return (
@@ -149,6 +150,7 @@ class EditEvents extends Component {
               <img
                 src="https://cdn4.iconfinder.com/data/icons/icon-flat-icon-set/50/share-512.png"
                 style={{ width: 25, height: 25 }}
+                alt="Share Icon"
               />
             </li>
             <li> click "Create Link" in the bottom left and copy that link</li>

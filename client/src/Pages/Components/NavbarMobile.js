@@ -10,22 +10,37 @@ class NavbarMobile extends Component {
       bar1Class: "bar1",
       bar2Class: "bar2",
       bar3Class: "bar3",
-      visible: true
+      visible: true,
+      navOpen: false
     };
   }
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  handleScroll = () => {
+    if (this.state.mobileExpanded) {
+      this.closeNav();
+    }
+  };
   toggleNavMenu = () => {
     if (this.state.bar1Class === "bar1") {
       this.openNav();
     } else {
       this.closeNav();
     }
+    this.setState({ mobileExpanded: !this.state.mobileExpanded });
   };
   openNav = () => {
     this.setState({
       bar1Class: "bar1 bar1change",
       bar2Class: "bar2 bar2change",
       bar3Class: "bar3 bar3change",
-      mobileExpanded: true
+      mobileExpanded: true,
+      navOpen: true
     });
   };
   closeNav = () => {

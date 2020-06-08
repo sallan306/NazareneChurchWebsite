@@ -57,6 +57,8 @@ body {
   opacity: 0.5;
   letter-spacing: 2px;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
 }
 .navButton:visited {
   text-decoration: none;

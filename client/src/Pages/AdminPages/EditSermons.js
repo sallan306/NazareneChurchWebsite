@@ -32,7 +32,7 @@ class EditSermons extends Component {
           The sermons are on the Soundcloud account, which is{" "}
           <button
             onClick={() => {
-              var win = window.open("https://soundcloud.com/", "_blank");
+              window.open("https://soundcloud.com/", "_blank");
             }}
           >
             HERE

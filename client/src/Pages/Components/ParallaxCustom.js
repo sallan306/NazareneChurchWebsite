@@ -30,7 +30,7 @@ class ParallaxCustom extends Component {
           bgImageStyle={
             this.props.bgStyle ? this.props.bgStyle : this.state.bgStyle
           }
-          bgImageAlt="the cat"
+          bgImageAlt="parallaxIMG"
         >
           <div className="parallaxContent">
             <div className="parallaxTitleContainer">

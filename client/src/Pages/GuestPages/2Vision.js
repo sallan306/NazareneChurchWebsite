@@ -70,7 +70,7 @@ class About extends Component {
                 title="googleSlideshow"
                 src="https://docs.google.com/presentation/d/e/2PACX-1vQkA3UdImbtcxmoFapYRmGvocRK6uGWMtW0VofeeHv_AS1dcRiPISXmHPUWz1gSyTWBUPF5MitfgoaH/embed?start=true&loop=true&delayms=3000"
                 frameBorder="0"
-                width={this.props.screenWidth > 600 ? "800" : "400"}
+                width={this.props.screenWidth > 600 ? "800" : "100%"}
                 height={this.props.screenWidth > 600 ? "400" : "300"}
                 allowFullScreen="true"
                 mozAllowFullScreen="true"

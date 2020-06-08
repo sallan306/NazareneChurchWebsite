@@ -55,7 +55,7 @@ class NavbarDesktop extends Component {
                 className="buttonAbout navButton"
                 onClick={() => this.props.closeNavAndChangePage("vision")}
               >
-                ABOUT US
+                ABOUT
               </Link>
               <Link
                 to="/vision"
@@ -126,10 +126,10 @@ class NavbarDesktop extends Component {
                   pointerEvents: this.props.hoverBeliefs ? "auto" : "none"
                 }}
                 onMouseEnter={() =>
-                  this.props.handleChangeState({ valuesOpacity: 1 })
+                  this.props.handleChangeState("valuesOpacity", 1)
                 }
                 onMouseLeave={() =>
-                  this.props.handleChangeState({ valuesOpacity: 0.5 })
+                  this.props.handleChangeState("valuesOpacity", 0.5)
                 }
               >
                 VALUES

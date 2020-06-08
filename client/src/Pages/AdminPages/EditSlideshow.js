@@ -8,7 +8,7 @@ const EditSlideshow = () => {
           Photos are uploaded using a google slideshow. The slideshow we are
           using is{" "}
           <button
-                onClick={() => {var win = window.open("https://docs.google.com/presentation/d/1hvcB5z6bY4rM8_cpBXitlx5tD20Q0-QiSsnbVWx_qRY/edit?usp=sharing","_blank")}}>
+                onClick={() => {window.open("https://docs.google.com/presentation/d/1hvcB5z6bY4rM8_cpBXitlx5tD20Q0-QiSsnbVWx_qRY/edit?usp=sharing","_blank")}}>
                   HERE
               </button>
         </div>
