@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FooterDonation from "../../Resources/FooterDonation.png"
+import FooterDonation from "../../Resources/FooterDonation.png";
 import { SocialIcon } from "react-social-icons";
 import { Link } from "react-router-dom";
 class Footer extends Component {
@@ -33,7 +33,7 @@ class Footer extends Component {
               For your convenience we offer tithe online, as well as
               automated monthly payments
             </h5> */}
-            <form
+            {/* <form
               action="https://www.paypal.com/cgi-bin/webscr"
               method="post"
               target="_top"
@@ -62,7 +62,7 @@ class Footer extends Component {
                 width="1"
                 height="1"
               />
-            </form>
+            </form> */}
             {/* <SocialIcon url="https://www.facebook.com/StoryPointComunityChurchOfTheNazarene" /> */}
             {/* <SocialIcon network="email" url="info@storypoint.info" /> */}
             <div
@@ -87,7 +87,11 @@ class Footer extends Component {
                 network="email"
                 url="sallan306@gmail.com"
               />
-              <Link to="/login">Login</Link>
+            </div>
+            <div>
+              <Link className="adminLoginLink" to="/login">
+                Admin Login
+              </Link>
             </div>
           </div>
         </div>

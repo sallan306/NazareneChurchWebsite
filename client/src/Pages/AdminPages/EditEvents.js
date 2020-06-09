@@ -125,12 +125,12 @@ class EditEvents extends Component {
       <div className="EditEvents">
         <NotificationContainer />
         <h1>Event Editor</h1>
-        <input
+        {/* <input
           type="file"
           className="eventFormItem eventFormFile"
           onChange={this.fileSelectHandler}
         ></input>
-        <button onClick={this.fileUploadHandler}>Upload File</button>
+        <button onClick={this.fileUploadHandler}>Upload File</button> */}
         <p>
           Events will automatically sort by the soonest one first. <br />
           For the image URL you need to:
