@@ -85,7 +85,7 @@ class Footer extends Component {
                     : "rotateY(0deg)"
                 }}
                 network="email"
-                url="sallan306@gmail.com"
+                url="mailto:sallan306@gmail.com"
               />
             </div>
             <div>

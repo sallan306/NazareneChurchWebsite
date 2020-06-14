@@ -9,7 +9,7 @@ class EditSermons extends Component {
   showUserPass = () => {
     if (this.state.showUserPass) {
       var username = "dan@storypoint.info";
-      var password = "2Samuel1234";
+      var password = "2Sam1234";
       return (
         <div>
           <p>username: {username}</p>
@@ -27,7 +27,7 @@ class EditSermons extends Component {
   render() {
     return (
       <div className="slideshowTutorialContent">
-        <div className="whiteSpace" />
+        <h1>Sermon Uploads</h1>
         <p>
           The sermons are on the Soundcloud account, which is{" "}
           <button
@@ -38,24 +38,16 @@ class EditSermons extends Component {
             HERE
           </button>
         </p>
-        {this.showUserPass()}
-        <p>
-          Once logged in, head over to the upload section, and drag and drop the
-          audio file onto the web page.
-        </p>
-        <p>
-          When titling the podcast, please follow the naming conventions I have
-          already started so that every audio file is in the proper order
-        </p>
-        <p>Format: YYYY/MM/DD NAME OF THE SERMON</p>
-        <p>
-          This naming convention is so that the sermons will automatically play
-          from the newest one first
-        </p>
-        <p>
-          Once you upload the sermon, make sure you add it to the playlist
-          "Storypoint Sermons" so it shows up on the website
-        </p>
+        {/* {this.showUserPass()} */}
+        <ul style={{ textAlign: "left" }}>
+          <li>Once logged in, head over to the upload section</li>
+          <li>Drag and drop the audio file onto the web page</li>
+          <li>Format for sermon title (important!): YYYY.MM.DD "NAME OF SERMON"</li>
+          <li>go to the "your tracks" tab</li>
+          <li>click the 3 dots ... next to the audio file</li>
+          <li>chose "add to playlist,"</li>
+          <li>click the orange "add" next to storypoint sermons</li>
+        </ul>
       </div>
     );
   }
